@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import Header from './components/Header';
-import ClassButtonList from './components/ClassButtonList'
+
+import ClassScreenContent from './components/ClassScreenContent'
 import './App.css';
 
 class App extends Component
@@ -14,8 +15,8 @@ class App extends Component
     return (
       <div className="App">
       <Header />
-        <h1>App</h1>
-        <ClassButtonList/>
+        <h1>Tabs go here (Race, Class, etc)</h1>
+        <ClassScreenContent/>
       </div>
     );
   }

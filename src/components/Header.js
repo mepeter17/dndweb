@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import Img from 'react-image'
+import logo from './d_d_logo.jpg'
 
 class Header extends Component
 {
@@ -9,7 +10,7 @@ class Header extends Component
     return (
       <div>
       Logo Goes here
-      <Img src="./d_d_logo.jpg" />
+      <image src={logo} alt="logo" />
 
       </div>
     );

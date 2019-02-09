@@ -1,0 +1,35 @@
+
+
+.m{
+background-color: #A89D8D;
+display:flex;
+flex-direction:row;
+align-self: auto;
+
+}
+
+.button_side
+{
+  width: 40%;
+  background-color: black;
+}
+
+.desc_side
+{
+  width: 50%;
+  background-color: #A89D8D;
+}
+
+button
+{
+  border-radius:10px;
+  border:black;
+  background-color: darkred;
+  height: 50px;
+  width:100px;
+}
+
+li
+{
+  padding:5px;
+}
