@@ -1,17 +1,27 @@
-.main
+.home_main
 {
    display: flex;
    flex-direction: row;
-
+   background-color: #A89D8D;
 }
 
 .left
 {
   width: 30%;
-  background-color: red;
+  background-color: #A89D8D;
   display: flex;
   flex-direction: column;
+  font-size: 10px;
+  justify-content: center;
+}
 
+button
+{
+  border-radius:10px;
+  border:black;
+  background-color: darkred;
+  height: 50px;
+  width:100px;
 }
 
 .right
