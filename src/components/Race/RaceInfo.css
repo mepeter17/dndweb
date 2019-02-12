@@ -25,3 +25,7 @@
   background-color: #A89D8D;
   width:50%;
 }
+
+ul {
+list-style-type: none;
+}

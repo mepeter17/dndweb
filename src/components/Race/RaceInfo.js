@@ -5,32 +5,39 @@ import './RaceInfo.css'
 class RaceInfo extends Component
 {
 
+  state = {
+    race: "Dwarf",
+    bonuses: ["bonus 1", "bonus 2"],
+    languages: ["lang one", "lang 2"],
+    other: ["other 1", "other 2"],
+    desc: "One dynamic long string",
+    image: "./dwarf.png"
+  }
+
   render()
   {
     return (
       <div className='full'>
-
       <div className='top'>
           <div className='left'>
-            <h1>Dwarf</h1>
+            <h1>{this.state.race}</h1>
             <h3>Race Bonuses:</h3>
-            <li>one</li>
-            <li>two</li>
+              <ul> {this.state.bonuses.map(p => <li key={p}>{p}</li>)} </ul>
             <h3>Languages:</h3>
-            <li>one</li>
-            <li>two</li>
+              <ul> {this.state.languages.map(p => <li key={p}>{p}</li>)} </ul>
             <h3>Other Important Info:</h3>
-            <li>one</li>
+              <ul> {this.state.other.map(p => <li key={p}>{p}</li>)} </ul>
           </div>
 
           <div className='right'>
-          Image goes here.
+           <img src={require("../Race/dwarf.png")} alt="dwarf" height='250px' />
           </div>
       </div>
 
       <div className='bottom'>
           <h3>Description:</h3>
-          Dwarves are really cool. how far do we want this to goooooooooooooooooooooooooo
+
+          {this.state.desc}
       </div>
 
       </div>

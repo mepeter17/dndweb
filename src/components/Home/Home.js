@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
 import './Home.css';
 import {Link} from "react-router";
-import dragon from './skeleton_dragon.png'
 
 
 class Home extends Component
@@ -19,7 +18,7 @@ class Home extends Component
         </div>
 
         <div className='right'>
-          <img src={dragon} height='200px'/>
+          <img src={require("./skeleton_dragon.png")} alt="Dragon" height='200px'/>
         </div>
 
 

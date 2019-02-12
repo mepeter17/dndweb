@@ -11,6 +11,7 @@ class Header extends Component
       <div>
       <a href='/'>
       <img src={logo} alt="Logo" height='50px' />
+      
       </a>
           </div>
       </div>
