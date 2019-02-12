@@ -1,9 +1,9 @@
 import React, { Component } from 'react';
-import './ClassScreenContent.css'
-import ClassButtonList from './ClassButtonList'
+import './RaceScreenContent.css'
+import RaceButtonList from './RaceButtonList'
 import RaceInfo from './RaceInfo'
 
-class ClassScreenContent extends Component
+class RaceScreenContent extends Component
 {
 
   render()
@@ -12,7 +12,7 @@ class ClassScreenContent extends Component
       <div className='m'>
 
       <div className='button_side'>
-      <ClassButtonList/>
+      <RaceButtonList/>
       </div>
 
       <div className='desc_side'>
@@ -25,4 +25,4 @@ class ClassScreenContent extends Component
   }
 }
 
-export default ClassScreenContent;
+export default RaceScreenContent;

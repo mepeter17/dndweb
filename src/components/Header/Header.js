@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
-import Img from 'react-image'
-import logo from './d_d_logo.jpg'
+import logo from './d_d_logo.jpg';
 
 class Header extends Component
 {
@@ -8,11 +7,14 @@ class Header extends Component
   render()
   {
     return (
+      <div className='main'>
       <div>
-      Logo Goes here
-      <image src={logo} alt="logo" />
-
+      <a href='/'>
+      <img src={logo} alt="Logo" height='50px' />
+      </a>
+          </div>
       </div>
+
     );
   }
 }

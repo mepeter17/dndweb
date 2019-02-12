@@ -1,8 +1,11 @@
 import React, { Component } from 'react';
-import Header from './components/Header';
-
-import ClassScreenContent from './components/ClassScreenContent'
+import Header from './components/Header/Header';
+import {Router, Route} from "react-router";
 import './App.css';
+import { browserHistory } from 'react-router'
+
+import RaceScreenContent from './components/Race/RaceScreenContent'
+import Home from './components/Home/Home'
 
 class App extends Component
 {
@@ -14,9 +17,12 @@ class App extends Component
   {
     return (
       <div className="App">
-      <Header />
-        <h1>Tabs go here (Race, Class, etc)</h1>
-        <ClassScreenContent/>
+        <Header />
+        <Router history={browserHistory} >
+          <Route path={"/"} component={Home}/>
+          <Route path={"/home"} component={Home}/>
+          <Route path={"/race"} component={RaceScreenContent}/>
+        </Router>
       </div>
     );
   }

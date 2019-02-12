@@ -1,0 +1,21 @@
+.main
+{
+   display: flex;
+   flex-direction: row;
+
+}
+
+.left
+{
+  width: 30%;
+  background-color: red;
+  display: flex;
+  flex-direction: column;
+
+}
+
+.right
+{
+  width:70%;
+  background-color: green;
+}

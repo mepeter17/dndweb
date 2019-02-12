@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
-import './ClassScreenContent.css'
-import ClassButtonList from './ClassButtonList'
+import './RaceScreenContent.css'
 import './RaceInfo.css'
 
 class RaceInfo extends Component

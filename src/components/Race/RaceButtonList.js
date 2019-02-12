@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
-import './ClassButtonList.css'
+import './RaceButtonList.css'
 
-class ClassButtonList extends Component
+class RaceButtonList extends Component
 {
 
   render()
@@ -35,4 +35,4 @@ class ClassButtonList extends Component
   }
 }
 
-export default ClassButtonList;
+export default RaceButtonList;
