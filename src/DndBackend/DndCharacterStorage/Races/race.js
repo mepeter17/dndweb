@@ -17,15 +17,15 @@ class Race extends Base{
         this.subDescription = null;
         this.getInfo();
     };
-    
+
     getInfo(){
-        var name = this.name, 
+        var name = this.name,
         path = this.pathToInfo;
         this.name = "traits";
         var n = name;
         if(name.split(" ").length === 2)
             n = name.split(" ")[1];
-        
+
         var fs = require('fs'),
         filePath = this.getFilePath('races/' + n + "/"),
         array = fs.readFileSync(filePath).toString().split("\r\n");
@@ -33,7 +33,7 @@ class Race extends Base{
         this.setPath(path);
         filePath = this.getFilePath('races/' + n + "/");
         this.description = fs.readFileSync(filePath).toString();
-        
+
         this.name = name;
         var sub = false;
         for(var i = 0; i < array.length; i++){
@@ -96,13 +96,13 @@ class Race extends Base{
             else break;
         }
     };
-    
+
     randomStartingMoney(){
         var m = this.funds.split(" ")[0].split("d");
         var sum = 0;
         for(var i = 0; i < m[0]; i++)
             sum += Math.ceil(Math.random() * m[1]);
-        
+
         if(this.name === "Monk")
             return sum + " gp";
         else return (sum * 10) + " gp";
@@ -110,4 +110,3 @@ class Race extends Base{
 }
 
 module.exports = Race;
-

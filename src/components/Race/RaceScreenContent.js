@@ -3,6 +3,7 @@ import './RaceScreenContent.css'
 import RaceButtonList from './RaceButtonList'
 import RaceInfo from './RaceInfo'
 
+
 class RaceScreenContent extends React.Component
 {
 
@@ -24,9 +25,13 @@ class RaceScreenContent extends React.Component
 
 
 
+
+
   ButtonClick(new_race)
   {
+    //const Race = require('../../DndBackend/DndCharacterStorage/Races/race');
       console.log(new_race);
+
       var myRace =
       {
         race: "Elf",
@@ -37,6 +42,8 @@ class RaceScreenContent extends React.Component
         image: "./dwarf.png"
       };
 
+      //myRace = new Race(new_race);
+      //console.log(myRace);
       this.setState({
         race: new_race,
         languages: myRace.languages,
