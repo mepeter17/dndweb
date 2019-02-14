@@ -1,8 +1,20 @@
 import React, { Component } from 'react';
 import './RaceButtonList.css'
+import RaceInfo from './RaceInfo'
+import PropTypes from 'prop-types';
 
 class RaceButtonList extends Component
 {
+
+
+  left_list = [ "Dwarf", "Elf", "Halfling", "Human", "Dragonborn"];
+  right_list = ["Gnome", "Half-Elf", "Half-Orc", "Tiefling"];
+
+  click(the_race)
+  {
+    this.props.pM(the_race);
+  }
+
 
   render()
   {
@@ -13,18 +25,11 @@ class RaceButtonList extends Component
 
         <div className='TwoLists'>
           <ul>
-            <li>  <button>Dwarf</button></li>
-            <li>  <button>Elf</button></li>
-            <li>  <button>Halfling</button></li>
-            <li>  <button>Human</button></li>
-            <li>  <button>Dragonborn</button></li>
+          {this.left_list.map(p => <li key={p}><button onClick={()=>this.click(p)}>{p}</button></li>)}
           </ul>
 
           <ul>
-            <li>  <button>Gnome</button></li>
-            <li>  <button>Half-Elf</button></li>
-            <li>  <button>Half-Orc</button></li>
-            <li>  <button>Tiefling</button></li>
+          {this.right_list.map(p => <li key={p}><button onClick={()=>this.click(p)}>{p}</button></li>)}
           </ul>
         </div>
 
@@ -33,6 +38,9 @@ class RaceButtonList extends Component
 
     );
   }
+
+
+
 }
 
 export default RaceButtonList;

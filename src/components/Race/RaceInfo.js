@@ -1,18 +1,57 @@
 import React, { Component } from 'react';
 import './RaceScreenContent.css'
 import './RaceInfo.css'
+//const Race = require('../../DndBackend/DndCharacterStorage/Races/race');
 
 class RaceInfo extends Component
 {
 
-  state = {
-    race: "Dwarf",
-    bonuses: ["bonus 1", "bonus 2"],
-    languages: ["lang one", "lang 2"],
-    other: ["other 1", "other 2"],
-    desc: "One dynamic long string",
-    image: "./dwarf.png"
+  constructor(props)
+  {
+    super(props);
+    this.state =
+    {
+      race: "Dwarf",
+      bonuses: ["bonus 1", "bonus 2"],
+      languages: ["lang one", "lang 2"],
+      other: ["other 1", "other 2"],
+      desc: "One dynamic long string",
+      image: "./dwarf.png"
+    };
+    this.componentWillReceiveProps = this.componentWillReceiveProps.bind(this);
   }
+
+  componentWillReceiveProps(nextProps)
+  {
+    var ns = nextProps.props;
+    this.setState({race: ns.race,
+      bonuses: ns.bonuses,
+      languages: ns.languages,
+      other: ns.other,
+      desc: ns.desc});
+  }
+
+  // select_race(new_race)
+  // {
+  //   var myRace =
+  //   {
+  //     race: "Elf",
+  //     abilityScore: ["elf 1", "elf 2"],
+  //     languages: ["elf one", "lang 2"],
+  //     abilities: ["elf 1", "other 2"],
+  //     description: "One dynamic elf elf elf",
+  //     image: "./dwarf.png"
+  //   }
+  //
+  //   this.setState({
+  //     race: new_race,
+  //     languages: myRace.languages,
+  //     bonuses: myRace.abilityScore,
+  //     other: myRace.abilities,
+  //     desc: myRace.description
+  //   });
+  //
+  // }
 
   render()
   {
