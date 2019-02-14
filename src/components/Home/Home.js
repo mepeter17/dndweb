@@ -14,7 +14,7 @@ class Home extends Component
           <ul>
           <li> <Link to={"/race"}>
             <button>Create Character</button> </Link> </li>
-            <li> <button>Load and View Character</button> </li>
+            <li><Link to={"/"}><button>Load and View Character</button> </Link></li>
           </ul>
         </div>
 

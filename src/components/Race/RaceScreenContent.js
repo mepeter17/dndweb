@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import './RaceScreenContent.css'
 import RaceButtonList from './RaceButtonList'
 import RaceInfo from './RaceInfo'
+import Footer from '../Footer/Footer'
 
 
 class RaceScreenContent extends React.Component
@@ -10,15 +11,15 @@ class RaceScreenContent extends React.Component
   constructor(props)
   {
   		super(props);
-          this.state =
-          {
-              race: "Dwarfff",
-              bonuses: ["bonus 1", "bonus 2"],
-              languages: ["lang one", "lang 2"],
-              other: ["other 1", "other 2"],
-              desc: "One dynamic long string",
-              image: "./dwarf.png"
-            }
+      this.state =
+      {
+            race: "Dwarfff",
+            bonuses: ["bonus 1", "bonus 2"],
+            languages: ["lang one", "lang 2"],
+            other: ["other 1", "other 2"],
+            desc: "One dynamic long string",
+            image: "./dwarf.png"
+        }
         this.ButtonClick = this.ButtonClick.bind(this);
         this.child = React.createRef();
   	}
@@ -57,17 +58,17 @@ class RaceScreenContent extends React.Component
   render()
   {
     return (
-      <div className='m'>
+      <div className="up_and_down">
+        <div className='m'>
+          <div className='button_side'>
+            <RaceButtonList pM={this.ButtonClick}/>
+          </div>
 
-      <div className='button_side'>
-      <RaceButtonList pM={this.ButtonClick}/>
+          <div className='desc_side'>
+            <RaceInfo props={this.state}/>
+          </div>
       </div>
-
-      <div className='desc_side'>
-      <RaceInfo props={this.state}/>
-      </div>
-
-
+        <Footer prev="/home" next="/class"/>
       </div>
     );
   }

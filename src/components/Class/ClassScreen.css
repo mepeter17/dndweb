@@ -8,13 +8,6 @@
 
 }
 
-.up_and_down
-{
-  display:flex;
-  flex-direction:column;
-  align-self: auto;
-}
-
 .button_side
 {
   width: 40%;
@@ -39,4 +32,23 @@ button
 li
 {
   padding:5px;
+}
+
+.button_side
+{
+  display: flex;
+  flex-direction: column;
+  font-size: 10px;
+  justify-content: space-space-around;
+  background-color: #A89D8D;
+}
+
+.TwoLists
+{
+  display: flex;
+  flex-direction: row;
+  font-size: 10px;
+  justify-content: space-space-around;
+  padding: 20px;
+
 }
