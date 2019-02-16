@@ -19,8 +19,10 @@ class App extends Component
   {
     return (
       <div className="App">
-        <Header />
+
         <BrowserRouter basename='dndweb'>
+        <div>
+        <Header />
           <Switch>
             <Route exact path={"/"} component={Home}/>
             <Route path={"/home"} component={Home}/>
@@ -28,6 +30,7 @@ class App extends Component
             <Route path={"/class"} component={ClassScreen}/>
             <Route path={"/stats"} component={Stats}/>
           </Switch>
+          </div>
         </BrowserRouter>
       </div>
     );

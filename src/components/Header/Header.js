@@ -10,7 +10,7 @@ class Header extends Component
     return (
       <div className='main'>
       <div>
-        <Link to='/'>
+          <Link to={"/"}>
           <img src={logo} alt="Logo" height='50px' />
           </Link>
           </div>
