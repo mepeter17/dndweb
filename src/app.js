@@ -20,9 +20,8 @@ class App extends Component
     return (
       <div className="App">
         <Header />
-        <Router history={browserHistory} >
+        <Router history={browserHistory} basename="/dndweb" >
           <Route path={"/"} component={Home}/>
-          <Route path={"/home"} component={Home}/>
           <Route path={"/race"} component={RaceScreenContent}/>
           <Route path={"/class"} component={ClassScreen}/>
           <Route path={"/stats"} component={Stats}/>

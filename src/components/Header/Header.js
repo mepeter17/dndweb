@@ -9,10 +9,10 @@ class Header extends Component
     return (
       <div className='main'>
       <div>
-      <a href='/'>
-      <img src={logo} alt="Logo" height='50px' />
-      
-      </a>
+        <a href='/'>
+          <img src={logo} alt="Logo" height='50px' />
+
+        </a>
           </div>
       </div>
 
