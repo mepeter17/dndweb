@@ -2,7 +2,6 @@ import React, { Component } from 'react';
 import './ClassScreen.css'
 import Footer from '../Footer/Footer'
 
-
 class ClassScreen extends React.Component
 {
 

@@ -52,7 +52,7 @@ class Stats extends React.Component
 
 
       </div>
-      <Footer prev="/class" />
+      <Footer prev="/class" next='/bio' />
     </div>
     );
   }
