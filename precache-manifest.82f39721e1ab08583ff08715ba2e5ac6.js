@@ -4,7 +4,7 @@ self.__precacheManifest = [
     "url": "/dndweb/static/media/skeleton_dragon.317aa000.png"
   },
   {
-    "revision": "b0313ee3510be31a80fa",
+    "revision": "e8d7156fdd0f4bc6713c",
     "url": "/dndweb/static/css/main.a9ba0106.chunk.css"
   },
   {
@@ -28,8 +28,8 @@ self.__precacheManifest = [
     "url": "/dndweb/static/media/d_d_logo.918e7d03.jpg"
   },
   {
-    "revision": "b0313ee3510be31a80fa",
-    "url": "/dndweb/static/js/main.b0313ee3.chunk.js"
+    "revision": "e8d7156fdd0f4bc6713c",
+    "url": "/dndweb/static/js/main.e8d7156f.chunk.js"
   },
   {
     "revision": "f4769f9bdb7466be65088239c12046d1",
@@ -52,7 +52,7 @@ self.__precacheManifest = [
     "url": "/dndweb/static/css/1.2819d9fe.chunk.css"
   },
   {
-    "revision": "83ee7f943a2dae2ade50d0ee5ed92880",
+    "revision": "575f3353ffbc0f51d0310295cf5d6ec3",
     "url": "/dndweb/index.html"
   }
 ];
