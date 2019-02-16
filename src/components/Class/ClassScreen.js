@@ -85,7 +85,7 @@ class ClassScreen extends React.Component
         </div>
 
       </div>
-      <Footer prev="/race" />
+      <Footer prev="/race" next='/stats'/>
     </div>
     );
   }
