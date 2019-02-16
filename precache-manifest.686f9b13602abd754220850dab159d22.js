@@ -32,16 +32,16 @@ self.__precacheManifest = [
     "url": "/dndweb/static/js/main.811ff9bd.chunk.js"
   },
   {
-    "revision": "f4769f9bdb7466be65088239c12046d1",
-    "url": "/dndweb/static/media/glyphicons-halflings-regular.f4769f9b.eot"
-  },
-  {
     "revision": "448c34a56d699c29117adc64c43affeb",
     "url": "/dndweb/static/media/glyphicons-halflings-regular.448c34a5.woff2"
   },
   {
     "revision": "fa2772327f55d8198301fdb8bcfc8158",
     "url": "/dndweb/static/media/glyphicons-halflings-regular.fa277232.woff"
+  },
+  {
+    "revision": "f4769f9bdb7466be65088239c12046d1",
+    "url": "/dndweb/static/media/glyphicons-halflings-regular.f4769f9b.eot"
   },
   {
     "revision": "e18bbf611f2a2e43afc071aa2f4e1512",
