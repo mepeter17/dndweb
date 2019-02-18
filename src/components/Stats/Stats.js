@@ -37,9 +37,14 @@ class Stats extends React.Component
           <h2>Randomly Generated Stats</h2>
           <p>{this.stats.map(p => (p + " "))}</p>
           <ul>
-          {this.cats.map(p => <li key={p}>{p}:<DropdownButton id="dropdown-basic-button" title="Dropdown button">
-            {this.stats.map(p => <Dropdown.Item>{p}</Dropdown.Item>)}
-          </DropdownButton> </li>)}
+          {
+            this.cats.map(p => <div className='lr' >
+            <li key={p}>{p}:<DropdownButton id="dropdown-basic-button" title="-">
+            {
+              this.stats.map(p => <Dropdown.Item>{p + "\n"}</Dropdown.Item>)
+            }
+            </DropdownButton> </li> </div>)
+          }
           </ul>
         </div>
 
