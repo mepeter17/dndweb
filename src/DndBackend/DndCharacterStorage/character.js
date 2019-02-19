@@ -1,4 +1,3 @@
-
 class Stats{
     constructor(){
         this.str = null;
@@ -53,50 +52,6 @@ class Info{
         this.exp = 0;
         this.backstory = null;
         this.languages = null;
-    }
-    
-    addExp(amount){
-        this.exp += amount;
-        if(this.exp > 355000)
-            this.level = 20;
-        else if(this.exp > 305000)
-            this.level = 19;
-        else if(this.exp > 265000)
-            this.level = 18;
-        else if(this.exp > 225000)
-            this.level = 17;
-        else if(this.exp > 195000)
-            this.level = 16;
-        else if(this.exp > 165000)
-            this.level = 15;
-        else if(this.exp > 140000)
-            this.level = 14;
-        else if(this.exp > 120000)
-            this.level = 13;
-        else if(this.exp > 100000)
-            this.level = 12;
-        else if(this.exp > 85000)
-            this.level = 11;
-        else if(this.exp > 64000)
-            this.level = 10;
-        else if(this.exp > 48000)
-            this.level = 9;
-        else if(this.exp > 34000)
-            this.level = 8;
-        else if(this.exp > 23000)
-            this.level = 7;
-        else if(this.exp > 14000)
-            this.level = 6;
-        else if(this.exp > 6500)
-            this.level = 5;
-        else if(this.exp > 2700)
-            this.level = 4;
-        else if(this.exp > 900)
-            this.level = 3;
-        else if(this.exp > 300)
-            this.level = 2;
-        else
-            this.level = 1;
     }
 }
 
@@ -157,19 +112,27 @@ class Spells{
     }
 }
 
-class Character{
-    constructor(name, race, cla){
-        this.info = new Info(name);
-        this.stats = new Stats();
-        this.physInfo = new PhysicalInfo();
-        this.combatInfo = new CombatInfo();
-        this.equipment = new Equipment();
-        this.spells = new Spells();
-        this.class = cla;
-        this.race = race;
+class Powers{
+    constructor(){
         this.features = [];
         this.abilities = [];
-        this.initializeInfo();
+    }
+}
+
+class Character{
+    constructor(name, race, cla){
+        if(name !== undefined){
+            this.info = new Info(name);
+            this.stats = new Stats();
+            this.physInfo = new PhysicalInfo();
+            this.combatInfo = new CombatInfo();
+            this.equipment = new Equipment();
+            this.spells = new Spells();
+            this.powers = new Powers();
+            this.class = cla;
+            this.race = race;
+            this.initializeInfo();
+        }
     }
     
     initializeInfo(){
@@ -182,8 +145,58 @@ class Character{
         if(this.class.features[0].name !== "Spellcasting")
             delete this.spells;
         this.addFeatures(1);
-        this.abilities = this.race.abilities;
+        this.powers.abilities = this.race.abilities;
     }
+    
+    
+    writeToFile(fileName){
+        const fs = require('fs');
+        var path = "../CreatedCharacters";
+        if(!fs.existsSync(path))
+            fs.mkdirSync(path);
+        
+        var info = JSON.stringify(this.info);
+        var stats = JSON.stringify(this.stats);
+        var physInfo = JSON.stringify(this.physInfo);
+        var combatInfo = JSON.stringify(this.combatInfo);
+        var equipment = JSON.stringify(this.equipment);
+        var spells = JSON.stringify(this.spells);
+        var powers = JSON.stringify(this.powers);
+        var className = JSON.stringify(this.class.name);
+        var raceName = JSON.stringify(this.race.name);
+        
+        var data = "info::" + info + "\r\n\
+stats::" + stats + "\r\n\
+physInfo::" + physInfo + "\r\n\
+combatInfo::" + combatInfo + "\r\n\
+equipment::" + equipment + "\r\n\
+spells::" + spells + "\r\n\
+powers::" + powers + "\r\n\
+class::" + className + "\r\n\
+race::" + raceName;
+        
+        fs.writeFileSync(path + "/" + fileName + ".txt", data);
+    }
+    
+    readFromFile(fileName){
+        const fs = require('fs');
+        var path = "../CreatedCharacters/" + fileName + ".txt";
+        var array = fs.readFileSync(path).toString().split("\r\n");
+        
+        this.info = JSON.parse(array[0].split("::")[1]);
+        this.stats = JSON.parse(array[1].split("::")[1]);
+        this.physInfo = JSON.parse(array[2].split("::")[1]);
+        this.combatInfo = JSON.parse(array[3].split("::")[1]);
+        this.equipment = JSON.parse(array[4].split("::")[1]);
+        if(JSON.parse(array[5].split("::")[1] !== "undefined"))
+            this.spells = JSON.parse(array[5].split("::")[1]);
+        this.powers = JSON.parse(array[6].split("::")[1]);
+        const Class = require('./Classes/class');
+        const Race = require('./Races/race');
+        this.class = new Class(JSON.parse(array[7].split("::")[1]));
+        this.race = new Race(JSON.parse(array[8].split("::")[1]));
+    }
+    
     
     addFeatures(level){
         level = level - 1;
@@ -192,7 +205,7 @@ class Character{
             for(var feat of features){
                 feat = feat.split("(")[0].trim();
                 if(feature.name.toLowerCase() === feat.toLowerCase())
-                    this.features.push(feature);
+                    this.powers.features.push(feature);
             }
         }
     }
@@ -226,7 +239,49 @@ class Character{
     
     addExp(amount){
         var level = this.info.level;
-        this.info.addExp(amount);
+        
+        this.info.exp += amount;
+        if(this.info.exp > 355000)
+            this.info.level = 20;
+        else if(this.info.exp > 305000)
+            this.info.level = 19;
+        else if(this.info.exp > 265000)
+            this.info.level = 18;
+        else if(this.info.exp > 225000)
+            this.info.level = 17;
+        else if(this.info.exp > 195000)
+            this.info.level = 16;
+        else if(this.info.exp > 165000)
+            this.info.level = 15;
+        else if(this.info.exp > 140000)
+            this.info.level = 14;
+        else if(this.info.exp > 120000)
+            this.info.level = 13;
+        else if(this.info.exp > 100000)
+            this.info.level = 12;
+        else if(this.info.exp > 85000)
+            this.info.level = 11;
+        else if(this.info.exp > 64000)
+            this.info.level = 10;
+        else if(this.info.exp > 48000)
+            this.info.level = 9;
+        else if(this.info.exp > 34000)
+            this.info.level = 8;
+        else if(this.info.exp > 23000)
+            this.info.level = 7;
+        else if(this.info.exp > 14000)
+            this.info.level = 6;
+        else if(this.info.exp > 6500)
+            this.info.level = 5;
+        else if(this.info.exp > 2700)
+            this.info.level = 4;
+        else if(this.info.exp > 900)
+            this.info.level = 3;
+        else if(this.info.exp > 300)
+            this.info.level = 2;
+        else
+            this.info.level = 1;
+        
         while(this.info.level > level++)
             this.levelUp(level);
     }
