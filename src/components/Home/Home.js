@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import './Home.css';
-import {Link} from "react-router";
+import {Link} from 'react-router-dom';
 
 
 class Home extends Component
@@ -13,7 +13,7 @@ class Home extends Component
         <div className='left'>
           <ul>
           <li> <Link to={"/race"}>
-            <button>Create Character</button> </Link> </li>
+            <button>CHUNGUS Create Character</button> </Link> </li>
             <li><Link to={"/"}><button>Load and View Character</button> </Link></li>
           </ul>
         </div>

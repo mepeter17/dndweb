@@ -2,7 +2,6 @@ import React, { Component } from 'react';
 import './ClassScreen.css'
 import Footer from '../Footer/Footer'
 
-
 class ClassScreen extends React.Component
 {
 
@@ -85,7 +84,7 @@ class ClassScreen extends React.Component
         </div>
 
       </div>
-      <Footer prev="/race" />
+      <Footer prev="/race" next='/stats'/>
     </div>
     );
   }
