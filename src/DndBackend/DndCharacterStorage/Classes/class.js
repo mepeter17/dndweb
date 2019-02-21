@@ -1,5 +1,5 @@
-const Base = require('./../base');
-const Feature = require('./feature');
+import Base from './../base';
+import Feature from './feature';
 
 function Level(level, proficiency, features){
     this.level = level;
@@ -27,17 +27,17 @@ class Class extends Base{
         this.getLevels();
         delete this.pathToInfo;
     };
-    
+
     getLevels(){
         var name = this.name,
         path = this.pathToInfo;
         this.name = "levels";
-        
+
         var fs = require('fs'),
         filePath = this.getFilePath('classes/' + name + '/'),
         levels = fs.readFileSync(filePath).toString().split("\r\n");
         this.setPath(path);
-        
+
         this.name = name;
 
         this.levels = [];
@@ -54,19 +54,19 @@ class Class extends Base{
             }
         }
     }
-    
+
     getFeatures(){
         var name = this.name,
         path = this.pathToInfo;
         this.name = "features1";
-        
+
         var fs = require('fs'),
         filePath = this.getFilePath('classes/' + name + '/'),
         features = fs.readFileSync(filePath).toString().split("\r\n-");
         this.setPath(path);
-        
+
         this.name = name;
-        
+
         this.features = [];
         for(var f of features){
             var n = f.split("\r\n")[0].trim();
@@ -76,9 +76,9 @@ class Class extends Base{
             this.features.push(new Feature(n, desc));
         }
     }
-    
+
     getInfo(){
-        var name = this.name, 
+        var name = this.name,
         path = this.pathToInfo;
 
         this.name = "base";
@@ -91,8 +91,8 @@ class Class extends Base{
         filePath = this.getFilePath('classes/' + name + '/');
         this.description = fs.readFileSync(filePath).toString();
         this.setPath(path);
-        
-        
+
+
         this.name = name;
         for(var line of array){
             line = line.split(":");
@@ -117,7 +117,7 @@ class Class extends Base{
             else break;
         }
     };
-    
+
     rollHitDice(max){
         var h = this.hitDice.split("d");
         if(max)
@@ -129,7 +129,5 @@ class Class extends Base{
     }
 }
 
-module.exports = Class;
-
-
-
+//module.exports = Class;
+export default Class;

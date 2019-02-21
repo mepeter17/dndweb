@@ -7,25 +7,96 @@ import {ButtonToolbar, Button} from 'react-bootstrap'
 
 class Stats extends React.Component
 {
-
-  constructor(props) {
+  constructor(props)
+  {
     super(props);
 
     this.toggle = this.toggle.bind(this);
+    this.stats = this.generate_stats();
+    console.log(this.stats);
     this.state = {
-      dropdownOpen: false
+      dropdownOpen: false,
+      cats: [{s:"Str",v:"-"}, {s:"Dex",v:"-"}, {s:"Cons",v:"-"}, {s:"Wis",v:"-"}, {s:"Int",v:"-"}, {s:"Cha",v:"-"}],
+      list: this.stats
     };
   }
 
-  toggle() {
+  toggle()
+  {
     this.setState(prevState => ({
       dropdownOpen: !prevState.dropdownOpen
     }));
   }
 
+  generate_stats = () =>
+  {
+      var s = [];
+      for(var i=0;i<6;i++)
+      {
+        s.push(this.generate_one_stat());
+      }
+      s.sort((a, b) => b - a);
+      return s;
+  }
 
-  stats = ["11", "14", "12", "15", "13", "18"];
-  cats = ["Str", "Dex", "Cons", "Wis", "Int", "Cha"]
+  generate_one_stat = () =>
+  {
+    var lowest = 20;
+    var total = 0;
+    for(var i=0; i<4;i++)
+    {
+      var current_roll = Math.floor(Math.random() * Math.floor(6));
+      if(current_roll < lowest)
+      {
+          lowest = current_roll;
+      }
+      total += current_roll;
+    }
+    return total-lowest;
+  }
+
+
+  handleChange = (stat) =>
+  {
+      this.setState()
+  }
+
+  pick_stat = (number, stat_name) =>
+  {
+      var new_list = this.state.list;
+      for(var i=0;i<this.state.list.length;i++)
+      {
+          if(new_list[i] == number)
+          {
+              new_list.splice(i,1);
+              this.setState({list: new_list})
+              this.set_stat_with_return(stat_name,number);
+              return;
+          }
+      }
+  }
+
+  set_stat_with_return = (stat_name,number) =>
+  {
+      var new_list = this.state.cats;
+      for(var i=0;i<new_list.length;i++)
+      {
+        var current_stat_name = new_list[i]["s"];
+        if(current_stat_name == stat_name)
+        {
+            var old_number = new_list[i]["v"];
+            if(old_number != "-")
+            {
+                var available_stats = this.state.list;
+                available_stats.push(old_number);
+                this.setState({list:available_stats});
+            }
+            new_list[i]["v"] = number;
+            this.setState({cats: new_list});
+        }
+      }
+  }
+
   render()
   {
     return (
@@ -35,15 +106,23 @@ class Stats extends React.Component
         <div className="Stats">
           <h1>Stats</h1>
           <h2>Randomly Generated Stats</h2>
-          <p>{this.stats.map(p => (p + " "))}</p>
+          <p>{(this.state.list).map(p => (p + " "))}</p>
           <ul>
           {
-            this.cats.map(p => <div className='lr' >
-            <li key={p}>{p}:<DropdownButton id="dropdown-basic-button" title="-">
-            {
-              this.stats.map(p => <Dropdown.Item>{p + "\n"}</Dropdown.Item>)
-            }
-            </DropdownButton> </li> </div>)
+            (this.state.cats).map(p =>
+
+              <li key={p['s']}>
+                <div className='lr' >
+                  <div className='ten'>{p['s']}</div>
+                    <DropdownButton title={p['v']}>
+                      {this.state.list.map(number =>
+                          <Dropdown.Item>
+                            <div onClick={()=>this.pick_stat(number, p['s'])}> {number} </div>
+                          </Dropdown.Item>)}
+                      </DropdownButton>
+                </div>
+              </li>
+          )
           }
           </ul>
         </div>

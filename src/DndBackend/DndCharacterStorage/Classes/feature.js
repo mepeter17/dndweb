@@ -5,5 +5,5 @@ class Feature{
     };
 }
 
-module.exports = Feature;
-
+//module.exports = Feature;
+export default Feature;

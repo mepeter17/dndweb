@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import './ClassScreen.css'
 import Footer from '../Footer/Footer'
+import Class from '../../DndBackend/DndCharacterStorage/Classes/class.js';
 
 class ClassScreen extends React.Component
 {
@@ -26,6 +27,7 @@ class ClassScreen extends React.Component
 
   ButtonClick(new_class)
   {
+
       var myClass =
       {
         class: "Bard",
@@ -35,6 +37,8 @@ class ClassScreen extends React.Component
         desc: "aaOne dynamic long string",
         image: "./dwarf.png"
       };
+
+      //myClass = new Class("Bard");
 
       this.setState({
         class: new_class,
