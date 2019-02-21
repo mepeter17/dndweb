@@ -1,10 +1,10 @@
 {
   "main.css": "/dndweb/static/css/main.884f42a2.chunk.css",
-  "main.js": "/dndweb/static/js/main.454d9b3e.chunk.js",
-  "main.js.map": "/dndweb/static/js/main.454d9b3e.chunk.js.map",
+  "main.js": "/dndweb/static/js/main.92e35c15.chunk.js",
+  "main.js.map": "/dndweb/static/js/main.92e35c15.chunk.js.map",
   "static/css/1.f9e0a277.chunk.css": "/dndweb/static/css/1.f9e0a277.chunk.css",
-  "static/js/1.0aa14bac.chunk.js": "/dndweb/static/js/1.0aa14bac.chunk.js",
-  "static/js/1.0aa14bac.chunk.js.map": "/dndweb/static/js/1.0aa14bac.chunk.js.map",
+  "static/js/1.87c8e372.chunk.js": "/dndweb/static/js/1.87c8e372.chunk.js",
+  "static/js/1.87c8e372.chunk.js.map": "/dndweb/static/js/1.87c8e372.chunk.js.map",
   "runtime~main.js": "/dndweb/static/js/runtime~main.737be95f.js",
   "runtime~main.js.map": "/dndweb/static/js/runtime~main.737be95f.js.map",
   "static/media/dwarf.png": "/dndweb/static/media/dwarf.9c1fef1f.png",
@@ -14,6 +14,6 @@
   "static/css/main.884f42a2.chunk.css.map": "/dndweb/static/css/main.884f42a2.chunk.css.map",
   "static/css/1.f9e0a277.chunk.css.map": "/dndweb/static/css/1.f9e0a277.chunk.css.map",
   "index.html": "/dndweb/index.html",
-  "precache-manifest.ab381407a0c04f6895a69f9c01685cd4.js": "/dndweb/precache-manifest.ab381407a0c04f6895a69f9c01685cd4.js",
+  "precache-manifest.f50d21cd17c465a33328bf13d84048c4.js": "/dndweb/precache-manifest.f50d21cd17c465a33328bf13d84048c4.js",
   "service-worker.js": "/dndweb/service-worker.js"
 }
