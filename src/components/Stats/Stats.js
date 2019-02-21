@@ -3,6 +3,7 @@ import './Stats.css'
 import Footer from '../Footer/Footer'
 import { DropdownButton, Dropdown  } from 'react-bootstrap';
 import {ButtonToolbar, Button} from 'react-bootstrap'
+import CommonDataManager from '../CommonDataManager';
 
 
 class Stats extends React.Component
@@ -10,15 +11,34 @@ class Stats extends React.Component
   constructor(props)
   {
     super(props);
-
     this.toggle = this.toggle.bind(this);
-    this.stats = this.generate_stats();
-    console.log(this.stats);
+    let commonData = CommonDataManager.getInstance();
+
+    if(commonData.getStats() == "empty")
+    {
+        this.stats = this.generate_stats();
+
+    }
+    else
+    {
+        this.stats = commonData.getStats();
+    }
+    this.cats =  [{s:"Str",v:"-"}, {s:"Dex",v:"-"}, {s:"Cons",v:"-"}, {s:"Wis",v:"-"}, {s:"Int",v:"-"}, {s:"Cha",v:"-"}];
+    if(commonData.getCats() != "empty")
+    {
+        this.cats = commonData.getCats();
+    }
+
     this.state = {
       dropdownOpen: false,
-      cats: [{s:"Str",v:"-"}, {s:"Dex",v:"-"}, {s:"Cons",v:"-"}, {s:"Wis",v:"-"}, {s:"Int",v:"-"}, {s:"Cha",v:"-"}],
+      cats: this.cats,
       list: this.stats
     };
+    commonData.setStats(this.state.list);
+    commonData.setCats(this.state.cats);
+
+
+
   }
 
   toggle()

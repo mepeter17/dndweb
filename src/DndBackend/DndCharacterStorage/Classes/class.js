@@ -7,7 +7,8 @@ function Level(level, proficiency, features){
     this.features = features;
 }
 
-class Class extends Base{
+class Class extends Base
+{
     constructor(name){
         super(name);
         this.abilityStrengths = null;
