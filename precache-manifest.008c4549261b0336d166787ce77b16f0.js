@@ -4,7 +4,7 @@ self.__precacheManifest = [
     "url": "/dndweb/static/media/skeleton_dragon.317aa000.png"
   },
   {
-    "revision": "454d9b3e7586e0beef0c",
+    "revision": "92e35c15244fbc2eb778",
     "url": "/dndweb/static/css/main.884f42a2.chunk.css"
   },
   {
@@ -28,20 +28,20 @@ self.__precacheManifest = [
     "url": "/dndweb/static/media/d_d_logo.918e7d03.jpg"
   },
   {
-    "revision": "454d9b3e7586e0beef0c",
-    "url": "/dndweb/static/js/main.454d9b3e.chunk.js"
+    "revision": "92e35c15244fbc2eb778",
+    "url": "/dndweb/static/js/main.92e35c15.chunk.js"
   },
   {
     "revision": "f4769f9bdb7466be65088239c12046d1",
     "url": "/dndweb/static/media/glyphicons-halflings-regular.f4769f9b.eot"
   },
   {
-    "revision": "fa2772327f55d8198301fdb8bcfc8158",
-    "url": "/dndweb/static/media/glyphicons-halflings-regular.fa277232.woff"
-  },
-  {
     "revision": "448c34a56d699c29117adc64c43affeb",
     "url": "/dndweb/static/media/glyphicons-halflings-regular.448c34a5.woff2"
+  },
+  {
+    "revision": "fa2772327f55d8198301fdb8bcfc8158",
+    "url": "/dndweb/static/media/glyphicons-halflings-regular.fa277232.woff"
   },
   {
     "revision": "e18bbf611f2a2e43afc071aa2f4e1512",
@@ -52,7 +52,7 @@ self.__precacheManifest = [
     "url": "/dndweb/static/css/1.f9e0a277.chunk.css"
   },
   {
-    "revision": "8f2a70ec564149751b950238935df624",
+    "revision": "ab5700f598071452e4de302d230df70c",
     "url": "/dndweb/index.html"
   }
 ];
