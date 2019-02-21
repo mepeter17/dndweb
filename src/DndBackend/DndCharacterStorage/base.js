@@ -49,5 +49,4 @@ class Base{
     }
 }
 
-//module.exports = Base;
-export default Base;
+module.exports = Base;

@@ -181,3 +181,17 @@ console.log(myCharacter.getWeapons());
 myCharacter.removeWeapon(myCharWeapons[1]);
 myCharacter.addArmor(myCharArmor[2]);
 console.log(myCharacter);
+
+console.log("_________________________\n_________________________");
+myCharacter.writeToFile("Char 1");
+
+var newCharacter = new Character();
+console.log(newCharacter);
+console.log("_________________________\n_________________________");
+newCharacter.readFromFile("Char 1");
+console.log(newCharacter);
+console.log("_________________________\n_________________________");
+if(JSON.stringify(myCharacter) === JSON.stringify(newCharacter))
+    console.log("Same");
+else
+    console.log("Not Same");
