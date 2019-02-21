@@ -1,0 +1,55 @@
+
+
+.m{
+  background-color: #A89D8D;
+  display:flex;
+  flex-direction:row;
+  align-self: auto;
+
+}
+
+.button_side
+{
+  width: 40%;
+  background-color: black;
+}
+
+.desc_side
+{
+  width: 50%;
+  background-color: #A89D8D;
+}
+
+
+button
+{
+  border-radius:10px;
+  border:black;
+  background-color: darkred;
+  height: 50px;
+  width:100px;
+}
+
+li
+{
+  padding:5px;
+}
+
+.button_side
+{
+  display: flex;
+  flex-direction: column;
+  font-size: 10px;
+  justify-content: space-space-around;
+  background-color: #A89D8D;
+}
+
+.TwoLists
+{
+  display: flex;
+  flex-direction: row;
+  font-size: 10px;
+  justify-content: space-space-around;
+  padding: 20px;
+
+}
