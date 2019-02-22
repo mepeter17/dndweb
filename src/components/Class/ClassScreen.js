@@ -3,6 +3,7 @@ import './ClassScreen.css'
 import {Link} from 'react-router-dom';
 import Footer from '../Footer/Footer'
 import Class from '../../DndBackend/DndCharacterStorage/Classes/class.js';
+import Tabs from '../Tabs/Tabs'
 
 class ClassScreen extends React.Component
 {
@@ -55,28 +56,7 @@ class ClassScreen extends React.Component
     return (
     <div className='content_footer'>
       <div className='background'>
-        <div className='tabs'>
-          <ul>
-            <li> <Link to={"/race"}>
-            <button class='tab'>Race</button> </Link> </li>
-            <li> <Link to={"/class"}>
-            <button class='tab tab2 tab_current'>Class</button> </Link> </li>
-            <li> <Link to={"/stats"}>
-            <button class='tab tab3'>Stats</button> </Link> </li>
-            <li> <Link to={"/bio"}>
-            <button class='tab tab4'>Bio</button> </Link> </li>
-            <li> <Link to={"/alignment"}>
-            <button class='tab tab5'>Alignment</button> </Link> </li>
-            <li> <Link to={"/alignment"}>
-            <button class='tab tab6'>Weapons</button> </Link> </li>
-            <li> <Link to={"/alignment"}>
-            <button class='tab tab7'>Armor</button> </Link> </li>
-            <li> <Link to={"/alignment"}>
-            <button class='tab tab8'>Other</button> </Link> </li>
-            <li> <Link to={"/alignment"}>
-            <button class='tab tab9'>Spells</button> </Link> </li>
-          </ul>
-        </div>
+      <Tabs value='class'/>
         <div className='m'>
           <button class ='tab tab2 tab_block'></button>
           <div className='button_side'>
