@@ -1,0 +1,49 @@
+.foot
+{
+  background-color: #E8D8C2;
+  height: 10%;
+  overflow: hidden;
+}
+
+.button_foot
+{
+  height: 70px;
+  width: 115px;
+  text-align: center;
+  font-size: 20px;
+  font-family: serif;
+  font-weight: bold;
+  color: #E8D8C2;
+  border: black;
+  border-radius: 10px;
+  background-color: #7B0F12;
+  margin: 6px 18px 0px 0px;
+  border: 1px solid #000000;
+  box-shadow: 4px 4px 7px 0px #706352;
+  text-shadow: 1px 1px 1px #000000;
+  overflow: hidden;
+}
+.button_class:hover
+{
+  transform: translateY(1px) translateX(1px);
+}
+.button_class:active
+{
+  transform: translateY(4px) translateX(4px);
+  color: #D8C8B2;
+  background-color: #700407;
+  box-shadow: 4px 4px 7px 0px #3A0A1A inset;
+}
+
+.button_prev
+{
+  left: 0px;
+  margin: 6px 0px 10px 15px;
+}
+
+.button_next
+{
+  position: absolute;
+  right: 0px;
+  margin: 6px 15px 10px 0px;
+}

@@ -19,8 +19,9 @@ class Home extends Component
           </ul>
         </div>
 
-        <div className='right_home'>
-          <img src={require("./skeleton_dragon.png")} alt="Dragon" width='1100px'/>
+        <div className='right_home'></div>
+        <div className='skele_drag'>
+          <img src={require("./skeleton_dragon1.png")} alt="Dragon" width='1650px'/>
         </div>
 
 

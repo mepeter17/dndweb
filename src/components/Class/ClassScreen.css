@@ -1,55 +1,167 @@
+.background
+{
+  background-color: #E8D8C2;
+  padding: 15px 0px 5px;
+  overflow: hidden;
+}
 
+.tabs
+{
+  background-color: #A89D8D;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  width: 95%;
+  left: 2.5%;
+  height: 40px;
+  border-radius: 8px;
+}
+
+.tab
+{
+  position: absolute;
+  height: 51px;
+  width: 10.5%;
+  text-align: center;
+  font-family: sans-serif;
+  font-size: 24px;
+  font-weight: normal;
+  color: #111111;
+  border: 2px solid #000000;
+  border-radius: 8px;
+  background-color: #C1B4A7;
+  text-shadow: 1px 1px 1px #555555;;
+  transform: translateX(-5px) translateY(-9px);
+}
+.tab2
+{
+  left: 10.55%;
+  transform: translateX(-1px) translateY(-19px);
+}
+.tab3
+{
+  left: 21%;
+  transform: translateX(-1px) translateY(-29px);
+}
+.tab4
+{
+  width: 8%;
+  left: 31.5%;
+  transform: translateX(-2px) translateY(-39px);
+}
+.tab5
+{
+  width: 14%;
+  left: 39.5%;
+  transform: translateX(-2px) translateY(-49px);
+}
+.tab6
+{
+  width: 13.5%;
+  left: 53.5%;
+  transform: translateX(-4px) translateY(-59px);
+}
+.tab7
+{
+  width: 10.75%;
+  left: 67%;
+  transform: translateX(-5px) translateY(-69px);
+}
+.tab8
+{
+  width: 10.65%;
+  left: 77.75%;
+  transform: translateX(-6px) translateY(-79px);
+}
+.tab9
+{
+  width: 12%;
+  left: 88.3%;
+  transform: translateX(-6px) translateY(-89px);
+}
+
+.tab_current
+{
+  background-color: #A89D8D;
+}
 
 .m{
   background-color: #A89D8D;
-  display:flex;
-  flex-direction:row;
+  display: flex;
+  flex-direction: row;
   align-self: auto;
-
+  border: 2px solid #000000;
+  position: relative;
+  width: 95%;
+  left: 2.5%;
 }
+
+.tab_block
+{
+  background-color: #A89D8D;
+  width: 10.55%;
+  height: 4px;
+  border: none;
+  border-left: 2px solid #000000;
+  border-right: 2px solid #000000;
+  border-radius: 0px;
+  transform: translateX(-3px) translateY(-4px);
+}
+
 
 .button_side
 {
-  width: 40%;
-  background-color: black;
+  width: 10%;
+  padding: 0px 20px 0px;
+  background-color: #A89D8D;
 }
 
 .desc_side
 {
-  width: 50%;
+  width: 90%;
   background-color: #A89D8D;
+}
+
+.button_class
+{
+  margin: 6px 18px 0px 0px;
+  border: 1px solid #000000;
+  box-shadow: 4px 4px 7px 0px #706352;
+  text-shadow: 1px 1px 1px #000000;
+}
+.button_class:hover
+{
+    transform: translateY(1px) translateX(1px);
+}
+.button_class:focus
+{
+    transform: translateY(4px) translateX(4px);
+    color: #D8C8B2;
+    background-color: #700407;
+    box-shadow: 4px 4px 7px 0px #3A0A1A inset;
 }
 
 
 button
 {
-  border-radius:10px;
-  border:black;
+  height: 70px;
+  width: 180px;
+  text-align: center;
+  border: black;
+  border-radius: 10px;
   background-color: darkred;
-  height: 50px;
-  width:100px;
 }
 
 li
 {
-  padding:5px;
-}
-
-.button_side
-{
-  display: flex;
-  flex-direction: column;
-  font-size: 10px;
-  justify-content: space-space-around;
-  background-color: #A89D8D;
+  font-family: serif;
+  font-size: 24px;
+  font-weight: bold;
+  color: #E8D8C2;
 }
 
 .TwoLists
 {
   display: flex;
   flex-direction: row;
-  font-size: 10px;
-  justify-content: space-space-around;
-  padding: 20px;
-
 }

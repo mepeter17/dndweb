@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import {Link} from 'react-router-dom';
+import './Footer.css';
 
 
 class Footer extends React.Component
@@ -19,8 +20,8 @@ class Footer extends React.Component
   {
     return (
       <div className='foot'>
-        <Link to={this.prev}><button>Previous</button></Link>
-        <Link to={this.next}><button>Next</button></Link>
+        <Link to={this.prev}><button class='button_foot button_prev'>Previous</button></Link>
+        <Link to={this.next}><button class='button_foot button_next'>Next</button></Link>
       </div>
     );
   }

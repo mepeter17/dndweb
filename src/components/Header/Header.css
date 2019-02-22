@@ -1,6 +1,5 @@
 .main
 {
-   display: flex;
-   flex-direction: row;
-   background-color: #E8D8C2;
+  background-color: #E8D8C2;
+  overflow: hidden;
 }
