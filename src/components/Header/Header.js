@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
-import logo from './dnd_transparent.png';
+import logo from './dnd_full_logo.png';
+import './Header.css';
 import {Link} from 'react-router-dom';
 
 class Header extends Component
@@ -9,11 +10,11 @@ class Header extends Component
   {
     return (
       <div className='main'>
-      <div>
+        <div>
           <Link to={"/"}>
-          <img src={logo} alt="Logo" height='50px' />
+          <img src={logo} alt="Logo" height='95px' />
           </Link>
-          </div>
+        </div>
       </div>
 
     );

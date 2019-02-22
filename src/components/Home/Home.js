@@ -10,7 +10,7 @@ class Home extends Component
   {
     return (
       <div className='home_main'>
-        <div className='left'>
+        <div className='left_home'>
           <ul>
             <li> <Link to={"/race"}>
             <button class='button'>Create Character</button> </Link> </li>
@@ -19,8 +19,8 @@ class Home extends Component
           </ul>
         </div>
 
-        <div className='right'>
-          <img src={require("./skeleton_dragon_original.png")} alt="Dragon" height='800px'/>
+        <div className='right_home'>
+          <img src={require("./skeleton_dragon.png")} alt="Dragon" width='1100px'/>
         </div>
 
 
