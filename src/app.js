@@ -4,7 +4,7 @@ import './App.css';
 
 import { BrowserRouter, Route, Switch } from 'react-router-dom'
 
-import RaceScreenContent from './components/Race/RaceScreenContent'
+import Race from './components/Race/RaceInfo'
 import Home from './components/Home/Home'
 import ClassScreen from './components/Class/ClassScreen'
 import Stats from './components/Stats/Stats'
@@ -28,7 +28,7 @@ class App extends Component
           <Switch>
             <Route exact path={"/"} component={Home}/>
             <Route path={"/home"} component={Home}/>
-            <Route path={"/race"} component={RaceScreenContent}/>
+            <Route path={"/race"} component={Race}/>
             <Route path={"/class"} component={ClassScreen}/>
             <Route path={"/stats"} component={Stats}/>
             <Route path={"/bio"} component={Bio}/>
