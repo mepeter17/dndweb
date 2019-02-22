@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import './Bio.css'
 import Footer from '../Footer/Footer'
+import Tabs from '../Tabs/Tabs'
 
 
 
@@ -11,6 +12,7 @@ class Align extends React.Component
   {
     return (
     <div className='content_footer'>
+    <Tabs value='alignment'/>
       <div className='lr'>
 
         <div className="left">

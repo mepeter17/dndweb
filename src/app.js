@@ -32,7 +32,7 @@ class App extends Component
             <Route path={"/class"} component={ClassScreen}/>
             <Route path={"/stats"} component={Stats}/>
             <Route path={"/bio"} component={Bio}/>
-            <Route path={"/align"} component={Align}/>
+            <Route path={"/alignment"} component={Align}/>
           </Switch>
           </div>
         </BrowserRouter>

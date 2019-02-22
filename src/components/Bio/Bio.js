@@ -3,6 +3,7 @@ import './Bio.css'
 import Footer from '../Footer/Footer'
 import { DropdownButton, Dropdown  } from 'react-bootstrap';
 import {ButtonToolbar, Button} from 'react-bootstrap'
+import Tabs from '../Tabs/Tabs'
 
 
 class Bio extends React.Component
@@ -13,6 +14,7 @@ class Bio extends React.Component
   {
     return (
     <div className='content_footer'>
+    <Tabs value='bio'/>
       <div className='lr'>
           <div className='left'>
               <div className='ud'>
@@ -51,7 +53,7 @@ class Bio extends React.Component
           </div>
       </div>
 
-      <Footer prev="/stats" next='/align' />
+      <Footer prev="/stats" next='/alignment' />
     </div>
     );
   }

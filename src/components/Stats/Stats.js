@@ -4,7 +4,7 @@ import Footer from '../Footer/Footer'
 import { DropdownButton, Dropdown  } from 'react-bootstrap';
 import {ButtonToolbar, Button} from 'react-bootstrap'
 import CommonDataManager from '../CommonDataManager';
-
+import Tabs from '../Tabs/Tabs'
 
 class Stats extends React.Component
 {
@@ -121,6 +121,7 @@ class Stats extends React.Component
   {
     return (
     <div className='content_footer'>
+    <Tabs value='stats'/>
       <div className='lr'>
 
         <div className="Stats">

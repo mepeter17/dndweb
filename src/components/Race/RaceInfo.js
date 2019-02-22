@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import './RaceInfo.css'
 import {Link} from 'react-router-dom';
 import Footer from '../Footer/Footer'
+import Tabs from '../Tabs/Tabs.js'
 //const Race = require('../../DndBackend/DndCharacterStorage/Races/race');
 
 class RaceInfo extends Component
@@ -46,28 +47,7 @@ class RaceInfo extends Component
     return (
     <div className='content_footer'>
       <div className='background'>
-        <div className='tabs'>
-          <ul>
-            <li> <Link to={"/race"}>
-            <button class='tab tab_current'>Race</button> </Link> </li>
-            <li> <Link to={"/class"}>
-            <button class='tab tab2 '>Class</button> </Link> </li>
-            <li> <Link to={"/stats"}>
-            <button class='tab tab3'>Stats</button> </Link> </li>
-            <li> <Link to={"/bio"}>
-            <button class='tab tab4'>Bio</button> </Link> </li>
-            <li> <Link to={"/alignment"}>
-            <button class='tab tab5'>Alignment</button> </Link> </li>
-            <li> <Link to={"/alignment"}>
-            <button class='tab tab6'>Weapons</button> </Link> </li>
-            <li> <Link to={"/alignment"}>
-            <button class='tab tab7'>Armor</button> </Link> </li>
-            <li> <Link to={"/alignment"}>
-            <button class='tab tab8'>Other</button> </Link> </li>
-            <li> <Link to={"/alignment"}>
-            <button class='tab tab9'>Spells</button> </Link> </li>
-          </ul>
-        </div>
+        <Tabs value='race'/>
         <div className='m'>
           <button class ='tab tab_block'></button>
           <div className='button_side'>
