@@ -71,23 +71,23 @@ class Tabs extends Component
         <div className='tabs'>
           <ul>
             <li> <Link to={"/race"}>
-            <button class={'tab ' + this.isc('race')}>Race</button> </Link> </li>
+            <button className={'tab ' + this.isc('race')}>Race</button> </Link> </li>
             <li> <Link to={"/class"}>
-            <button class={'tab tab2 ' + this.isc('class')}>Class</button> </Link> </li>
+            <button className={'tab tab2 ' + this.isc('class')}>Class</button> </Link> </li>
             <li> <Link to={"/stats"}>
-            <button class={'tab tab3' + this.isc('stats')}>Stats</button> </Link> </li>
+            <button className={'tab tab3' + this.isc('stats')}>Stats</button> </Link> </li>
             <li> <Link to={"/bio"}>
-            <button class={'tab tab4' + this.isc('bio')}>Bio</button> </Link> </li>
+            <button className={'tab tab4' + this.isc('bio')}>Bio</button> </Link> </li>
             <li> <Link to={"/alignment"}>
-            <button class={'tab tab5' + this.isc('alignment')}>Alignment</button> </Link> </li>
+            <button className={'tab tab5' + this.isc('alignment')}>Alignment</button> </Link> </li>
             <li> <Link to={"/alignment"}>
-            <button class={'tab tab6' + this.isc('weapons')}>Weapons</button> </Link> </li>
+            <button className={'tab tab6' + this.isc('weapons')}>Weapons</button> </Link> </li>
             <li> <Link to={"/alignment"}>
-            <button class={'tab tab7' + this.isc('armor')}>Armor</button> </Link> </li>
+            <button className={'tab tab7' + this.isc('armor')}>Armor</button> </Link> </li>
             <li> <Link to={"/alignment"}>
-            <button class={'tab tab8' + this.isc('other')}>Other</button> </Link> </li>
+            <button className={'tab tab8' + this.isc('other')}>Other</button> </Link> </li>
             <li> <Link to={"/alignment"}>
-            <button class={'tab tab9' + this.isc('spells')}>Spells</button> </Link> </li>
+            <button className={'tab tab9' + this.isc('spells')}>Spells</button> </Link> </li>
           </ul>
         </div>
 

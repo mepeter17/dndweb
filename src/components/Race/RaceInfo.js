@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
 import './RaceInfo.css'
-import {Link} from 'react-router-dom';
 import Footer from '../Footer/Footer'
 import Tabs from '../Tabs/Tabs.js'
 //const Race = require('../../DndBackend/DndCharacterStorage/Races/race');

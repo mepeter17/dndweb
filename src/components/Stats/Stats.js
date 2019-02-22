@@ -2,11 +2,10 @@ import React, { Component } from 'react';
 import './Stats.css'
 import Footer from '../Footer/Footer'
 import { DropdownButton, Dropdown  } from 'react-bootstrap';
-import {ButtonToolbar, Button} from 'react-bootstrap'
 import CommonDataManager from '../CommonDataManager';
 import Tabs from '../Tabs/Tabs'
 
-class Stats extends React.Component
+class Stats extends Component
 {
   constructor(props)
   {
@@ -14,7 +13,7 @@ class Stats extends React.Component
     this.toggle = this.toggle.bind(this);
     let commonData = CommonDataManager.getInstance();
 
-    if(commonData.getStats() == "empty")
+    if(commonData.getStats() === "empty")
     {
         this.stats = this.generate_stats();
 
@@ -24,7 +23,7 @@ class Stats extends React.Component
         this.stats = commonData.getStats();
     }
     this.cats =  [{s:"Str",v:"-"}, {s:"Dex",v:"-"}, {s:"Cons",v:"-"}, {s:"Wis",v:"-"}, {s:"Int",v:"-"}, {s:"Cha",v:"-"}];
-    if(commonData.getCats() != "empty")
+    if(commonData.getCats() !== "empty")
     {
         this.cats = commonData.getCats();
     }
@@ -86,7 +85,7 @@ class Stats extends React.Component
       var new_list = this.state.list;
       for(var i=0;i<this.state.list.length;i++)
       {
-          if(new_list[i] == number)
+          if(new_list[i] === number)
           {
               new_list.splice(i,1);
               this.setState({list: new_list})
@@ -102,10 +101,10 @@ class Stats extends React.Component
       for(var i=0;i<new_list.length;i++)
       {
         var current_stat_name = new_list[i]["s"];
-        if(current_stat_name == stat_name)
+        if(current_stat_name === stat_name)
         {
             var old_number = new_list[i]["v"];
-            if(old_number != "-")
+            if(old_number !== "-")
             {
                 var available_stats = this.state.list;
                 available_stats.push(old_number);

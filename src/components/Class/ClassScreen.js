@@ -1,8 +1,6 @@
-import React, { Component } from 'react';
+import React from 'react';
 import './ClassScreen.css'
-import {Link} from 'react-router-dom';
 import Footer from '../Footer/Footer'
-import Class from '../../DndBackend/DndCharacterStorage/Classes/class.js';
 import Tabs from '../Tabs/Tabs'
 
 class ClassScreen extends React.Component

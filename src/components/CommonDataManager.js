@@ -6,6 +6,12 @@ export default class CommonDataManager
     _stats = "empty";
     _cats = "empty";
 
+    _gender = "";
+    _name = "";
+    _ft = "";
+    _in = "";
+    _lbs = "";
+    _bio = "";
 
     /**
      * @returns {CommonDataManager}
