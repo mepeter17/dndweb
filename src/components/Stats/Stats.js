@@ -4,7 +4,7 @@ import Footer from '../Footer/Footer'
 import { DropdownButton, Dropdown  } from 'react-bootstrap';
 import {ButtonToolbar, Button} from 'react-bootstrap'
 import CommonDataManager from '../CommonDataManager';
-
+import Tabs from '../Tabs/Tabs'
 
 class Stats extends React.Component
 {
@@ -121,40 +121,43 @@ class Stats extends React.Component
   {
     return (
     <div className='content_footer'>
-      <div className='lr'>
+      <div className='background'>
+        <Tabs value='stats'/>
 
-        <div className="Stats">
-          <h1>Stats</h1>
-          <h2>Randomly Generated Stats</h2>
-          <p>{(this.state.list).map(p => (p + " "))}</p>
-          <ul>
-          {
-            (this.state.cats).map(p =>
+        <div className='m'>
+          <div className='lr'>
+              <div className="Stats">
+                <h1>Stats</h1>
+                <h2>Randomly Generated Stats</h2>
+                <p>{(this.state.list).map(p => (p + " "))}</p>
+                <ul>
+                {
+                  (this.state.cats).map(p =>
 
-              <li key={p['s']}>
-                <div className='lr' >
-                  <div className='ten'>{p['s']}</div>
-                    <DropdownButton title={p['v']}>
-                      {this.state.list.map(number =>
-                          <Dropdown.Item>
-                            <div onClick={()=>this.pick_stat(number, p['s'])}> {number} </div>
-                          </Dropdown.Item>)}
-                      </DropdownButton>
-                </div>
-              </li>
-          )
-          }
-          </ul>
+                    <li key={p['s']}>
+                      <div className='lr' >
+                        <div className='ten'>{p['s']}</div>
+                          <DropdownButton title={p['v']}>
+                            {this.state.list.map(number =>
+                                <Dropdown.Item>
+                                  <div onClick={()=>this.pick_stat(number, p['s'])}> {number} </div>
+                                </Dropdown.Item>)}
+                            </DropdownButton>
+                      </div>
+                    </li>
+                )
+                }
+                </ul>
+              </div>
+
+              <div>
+                <h3>Racial Bonuses:</h3>
+                <h3>Important for Class:</h3>
+                <h3>Common:</h3>
+                <h3>Alternative:</h3>
+              </div>
+          </div>
         </div>
-
-        <div>
-          <h3>Racial Bonuses:</h3>
-          <h3>Important for Class:</h3>
-          <h3>Common:</h3>
-          <h3>Alternative:</h3>
-        </div>
-
-
       </div>
       <Footer prev="/class" next='/bio' />
     </div>
