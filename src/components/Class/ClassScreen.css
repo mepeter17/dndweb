@@ -89,7 +89,6 @@
   background-color: #A89D8D;
   display: flex;
   flex-direction: row;
-  align-self: auto;
   border: 2px solid #000000;
   position: relative;
   width: 95%;
@@ -111,57 +110,71 @@
 
 .button_side
 {
-  width: 10%;
-  padding: 0px 20px 0px;
+  padding: 0px 0px 0px 25px;
   background-color: #A89D8D;
 }
 
 .desc_side
 {
-  width: 90%;
   background-color: #A89D8D;
-  margin: 13px 0px 0px 0px;
+  margin: 13px 0px 0px -100px;
+}
+
+.left
+{
 }
 
 .right
 {
-    margin: 20px 0px 0px 0px;
+  margin: 20px 0px 0px 0px;
+}
+
+.bottom
+{
+  margin: -10px 0px 0px 0px;
+}
+
+.picture
+{
+  position: absolute;
+  height: 60%;
 }
 
 .button_class
 {
-  margin: 6px 18px 0px 0px;
+  margin: 4px 18px 0px 0px;
   border: 1px solid #000000;
   box-shadow: 4px 4px 7px 0px #706352;
   text-shadow: 1px 1px 1px #000000;
+  transform: translateX(-13px) translateY(-25px);
 }
 .button_class:hover
 {
-    transform: translateY(1px) translateX(1px);
+  transform: translateY(1px) translateX(1px);
 }
 .button_class:focus
 {
-    transform: translateY(4px) translateX(4px);
-    color: #D8C8B2;
-    background-color: #700407;
-    box-shadow: 4px 4px 7px 0px #3A0A1A inset;
+  transform: translateY(4px) translateX(4px);
+  color: #D8C8B2;
+  background-color: #700407;
+  box-shadow: 4px 4px 7px 0px #3A0A1A inset;
 }
 
 
 button
 {
   height: 70px;
-  width: 180px;
+  width: 190px;
   text-align: center;
   border: black;
-  border-radius: 10px;
+  border-radius: 11px;
   background-color: darkred;
 }
 
 li
 {
   font-family: serif;
-  font-size: 24px;
+  font-size: 28px;
   font-weight: bold;
   color: #E8D8C2;
 }

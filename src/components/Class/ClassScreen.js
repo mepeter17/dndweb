@@ -16,7 +16,7 @@ class ClassScreen extends React.Component
           important_stats: "Str and Dex",
           bonuses: ["bonus 1", "bonus 2"],
           other: ["other 1", "other 2"],
-          desc: "One dynamic long string",
+          desc: "One dynamic long string aaaaaaaaa aaaaaaaaa aaaaaaaaa aaaaaaaaa aaaaaaaaa aaaaaaaaa aaaaaaaaa aaaaaaaaa aaaaaaaaa aaaaaaaaa aaaaaaaaa aaaaaaaaa aaaaaaaaa aaaaaaaaa aaaaaaaaa aaaaaaaaa aaaaaaaaa aaaaaaaaa aaaaaaaaa aaaaaaaaa aaaaaaaaa",
           image: "./dwarf.png"
         }
         this.ButtonClick = this.ButtonClick.bind(this);
@@ -81,7 +81,7 @@ class ClassScreen extends React.Component
           <button class ='tab tab2 tab_block'></button>
           <div className='button_side'>
             <h1><b1>Class Selection</b1></h1>
-            <h3><b3>Choose a Class:</b3></h3>
+            <h3><b3>&nbsp;Choose a Class:</b3></h3>
             <div className='TwoLists'>
               <ul>{this.left_list.map(p => <li key={p}><button class='button_class' onClick={()=>this.ButtonClick(p)}>{p}</button></li>)} </ul>
               <ul>{this.right_list.map(p => <li key={p}><button class='button_class' onClick={()=>this.ButtonClick(p)}>{p}</button></li>)}  </ul>
@@ -93,21 +93,21 @@ class ClassScreen extends React.Component
               <div className='left'>
                 <h2><b2>{this.state.class}</b2></h2>
                 <h3><b3>Important Stats:</b3></h3>
-                <a1> {this.state.important_stats} </a1>
+                <a1> &nbsp;&nbsp;{this.state.important_stats} </a1>
                 <h3><b3>Class Bonuses:</b3></h3>
-                {this.state.bonuses.map(p => <ul> <a1 key={p}>{p} </a1> </ul>)}
+                {this.state.bonuses.map(p => <ul>&nbsp;&nbsp;<a1>-</a1> <a1 key={p}>{p} </a1> </ul>)}
                 <h3><b3>Other Important Info:</b3></h3>
-                {this.state.other.map(p => <ul> <a1 key={p}>{p} </a1> </ul>)}
+                {this.state.other.map(p => <ul>&nbsp;&nbsp;<a1>-</a1> <a1 key={p}>{p} </a1> </ul>)}
               </div>
 
               <div className='right'>
-                <img src={require("../Race/dwarf.png")} alt="dwarf" height='250px' />
+                <img src={require("../Race/dwarf.png")} alt="dwarf" class="picture" />
               </div>
             </div>
 
             <div className='bottom'>
               <h3><b3>Description:</b3></h3>
-              <a1>{this.state.desc}</a1>
+              <a1>&nbsp;&nbsp;{this.state.desc}</a1>
             </div>
           </div>
 
