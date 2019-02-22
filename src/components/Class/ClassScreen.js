@@ -80,8 +80,8 @@ class ClassScreen extends React.Component
         <div className='m'>
           <button class ='tab tab2 tab_block'></button>
           <div className='button_side'>
-            <h1>Class Selection</h1>
-            <h2>Choose a Class:</h2>
+            <h1><b1>Class Selection</b1></h1>
+            <h3><b3>Choose a Class:</b3></h3>
             <div className='TwoLists'>
               <ul>{this.left_list.map(p => <li key={p}><button class='button_class' onClick={()=>this.ButtonClick(p)}>{p}</button></li>)} </ul>
               <ul>{this.right_list.map(p => <li key={p}><button class='button_class' onClick={()=>this.ButtonClick(p)}>{p}</button></li>)}  </ul>
@@ -91,13 +91,13 @@ class ClassScreen extends React.Component
           <div className='desc_side'>
             <div className='top'>
               <div className='left'>
-                <h1>{this.state.class}</h1>
-                <h3>Important Stats:</h3>
-                  <ul> {this.state.important_stats} </ul>
-                <h3>Class Bonuses:</h3>
-                    <ul> {this.state.bonuses.map(p => <li key={p}>{p}</li>)} </ul>
-                <h3>Other Important Info:</h3>
-                    <ul> {this.state.other.map(p => <li key={p}>{p}</li>)} </ul>
+                <h2><b2>{this.state.class}</b2></h2>
+                <h3><b3>Important Stats:</b3></h3>
+                <a1> {this.state.important_stats} </a1>
+                <h3><b3>Class Bonuses:</b3></h3>
+                {this.state.bonuses.map(p => <ul> <a1 key={p}>{p} </a1> </ul>)}
+                <h3><b3>Other Important Info:</b3></h3>
+                {this.state.other.map(p => <ul> <a1 key={p}>{p} </a1> </ul>)}
               </div>
 
               <div className='right'>
@@ -106,8 +106,8 @@ class ClassScreen extends React.Component
             </div>
 
             <div className='bottom'>
-              <h3>Description:</h3>
-                {this.state.desc}
+              <h3><b3>Description:</b3></h3>
+              <a1>{this.state.desc}</a1>
             </div>
           </div>
 
