@@ -1,3 +1,9 @@
+.picture
+{
+  position: absolute;
+  height: 60%;
+}
+
 .full
 {
   background-color: #A89D8D;

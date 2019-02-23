@@ -71,7 +71,7 @@ class RaceInfo extends Component
               </div>
 
               <div className='right'>
-                <img src={require("../Race/dwarf.png")} alt="dwarf" height='250px' />
+                <img src={require("../../photos/" + this.state.race + ".png")} alt={this.state.race} class='picture' />
               </div>
             </div>
 

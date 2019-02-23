@@ -25,7 +25,7 @@ class ClassScreen extends React.Component
   }
 
   left_list = [ "Barbarian", "Bard", "Cleric", "Druid", "Fighter", "Monk"];
-  right_list = ["Paladin", "Ranger", "Rogue", "Sorceror", "Warlock", "Wizard"];
+  right_list = ["Paladin", "Ranger", "Rogue", "Sorcerer", "Warlock", "Wizard"];
 
   ButtonClick(new_class)
   {
@@ -67,6 +67,7 @@ class ClassScreen extends React.Component
 
   render()
   {
+    console.log(this.state.class);
     return (
     <div className='content_footer'>
       <div className='background'>
@@ -95,7 +96,7 @@ class ClassScreen extends React.Component
               </div>
 
               <div className='right'>
-                <img src={require("../Race/dwarf.png")} alt="dwarf" class="picture" />
+                <img src={require("../../photos/" + this.state.class + ".png")} alt={this.state.class} class="picture" />
               </div>
             </div>
 
