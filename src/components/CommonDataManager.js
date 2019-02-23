@@ -1,7 +1,7 @@
 export default class CommonDataManager
 {
-    class_button = null;
-    
+    class_button = 'Barbarian';
+    race_button = 'Dwarf';
     
     static myInstance = null;
 
