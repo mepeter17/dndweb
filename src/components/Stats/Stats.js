@@ -64,7 +64,7 @@ class Stats extends Component
     var total = 0;
     for(var i=0; i<4;i++)
     {
-      var current_roll = Math.floor(Math.random() * Math.floor(6));
+      var current_roll = Math.ceil(Math.random() * 6);
       if(current_roll < lowest)
       {
           lowest = current_roll;

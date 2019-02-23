@@ -150,14 +150,25 @@
 }
 .button_class:hover
 {
-  transform: translateY(1px) translateX(1px);
+  transform: translateX(-12px) translateY(-24px);
 }
 .button_class:focus
 {
-  transform: translateY(4px) translateX(4px);
+  transform: translateX(-9px) translateY(-21px);
   color: #D8C8B2;
   background-color: #700407;
   box-shadow: 4px 4px 7px 0px #3A0A1A inset;
+}
+
+.button_persist
+{
+  margin: 4px 18px 0px 0px;
+  border: 1px solid #000000;
+  color: #D8C8B2;
+  background-color: #700407;
+  box-shadow: 4px 4px 7px 0px #3A0A1A inset;
+  text-shadow: 1px 1px 1px #000000;
+  transform: translateX(-9px) translateY(-21px);
 }
 
 

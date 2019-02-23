@@ -83,7 +83,7 @@ class RaceInfo extends Component
 
         </div>
       </div>
-      <Footer prev="/race" next='/class'/>
+      <Footer prev="/home" next='/class'/>
     </div>
     );
   }

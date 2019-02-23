@@ -1,6 +1,8 @@
 export default class CommonDataManager
 {
-
+    class_button = null;
+    
+    
     static myInstance = null;
 
     _stats = "empty";
