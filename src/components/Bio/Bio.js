@@ -61,49 +61,47 @@ class Bio extends React.Component
               <div className='lr'>
                   <div className='left'>
                       <div className='ud'>
-                              <h1>Bio</h1>
-                              <h3>Choose Name</h3>
-                              <input type="text" name="name"
-                                onChange={ this.handleChange.bind(this) }
-                                 value={this.state.name}/>
-                              <h3>Select Gender: {this.state.gender}</h3>
-                                <div className='lr'>
-                                  <button onClick={()=>this.change_gender("Male")}>Male</button>
-                                  <button onClick={()=>this.change_gender("Female")}>Female</button>
-                                </div>
-
-                              <h3>Set Height </h3>
-                                <div className='lr'>
-                                      <input type="text"
-                                        value={this.state.ft}
-                                        onChange={ this.handleChange.bind(this) }
-                                        name="ft"  />
-                                      ft
-                                      <input type="text" name="in"
-                                        onChange={ this.handleChange.bind(this) }
-                                         value={this.state.in}/>
-                                      in
-                                  <button>Random</button>
-                                </div>
-
-                              <h3>Set Weight </h3>
-                                <div className='lr'>
-                                      <input type="text"
-                                        value={this.state.lbs}
-                                        onChange={ this.handleChange.bind(this) }
-                                        name="lbs"/>
-                                      lbs
-                                  <button>Random</button>
-                                </div>
+                        <h1><b1>Bio</b1></h1>
+                        <h3><b3>Choose Name</b3></h3>
+                        <input type="text" name="name"
+                          onChange={ this.handleChange.bind(this) }
+                          value={this.state.name}/>
+                        <h3><b3>Select Gender: {this.state.gender}</b3></h3>
+                        <div className='buttons'>
+                          <bio1><button class='button_class_bio' onClick={()=>this.change_gender("Male")}>Male</button></bio1>
+                          <bio1><button class='button_class_bio' onClick={()=>this.change_gender("Female")}>Female</button></bio1>
+                        </div>
+                        <h3><b3>Set Height:</b3></h3>
+                        <div className='buttons'>
+                          <input type="text"
+                            value={this.state.ft}
+                            onChange={ this.handleChange.bind(this) }
+                            name="ft"  />
+                          <a1>&nbsp;ft&nbsp;&nbsp;</a1>
+                          <input type="text" name="in"
+                            onChange={ this.handleChange.bind(this) }
+                            value={this.state.in}/>
+                          <a1>&nbsp;in</a1>
+                          <bio1><button class='random_button' >Random</button></bio1>
+                        </div>
+                          <h3><b3>Set Weight:</b3></h3>
+                          <div className='buttons'>
+                            <input type="text"
+                              value={this.state.lbs}
+                              onChange={ this.handleChange.bind(this) }
+                              name="lbs"/>
+                            <a1>&nbsp;lbs</a1>
+                            <bio1><button class='random_button' >Random</button></bio1>
+                          </div>
                         </div>
                   </div>
 
                   <div className='right'>
-                      <h3>Biography (optional)</h3>
-                      <input type="text"
-                        value={this.state.bio}
-                        onChange={ this.handleChange.bind(this) }
-                        name="bio" />
+                    <h3><b3>Biography (optional):</b3></h3>
+                    <textarea type='bio'
+                      value={this.state.bio}
+                      onChange={ this.handleChange.bind(this) }
+                      name="bio" />
                   </div>
               </div>
           </div>

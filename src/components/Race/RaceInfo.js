@@ -86,7 +86,7 @@ class RaceInfo extends Component
               </div>
 
               <div className='right'>
-                <img src={require("../../photos/" + this.state.race + ".png")} alt={this.state.race} class='picture' />
+                <img src={require("../../photos/" + this.state.race + ".png")} alt={this.state.race} class='picture_race' />
               </div>
             </div>
 
