@@ -124,6 +124,7 @@ class Stats extends Component
         <Tabs value='stats'/>
 
         <div className='m'>
+          <button class='tab tab2 tab3 tab_block tab_shift'></button>
           <div className='lr'>
               <div className="Stats">
                 <h1>Stats</h1>

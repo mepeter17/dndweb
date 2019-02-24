@@ -1,14 +1,16 @@
 export default class CommonDataManager
 {
-    class_button = 'Barbarian';
-    race_button = 'Dwarf';
-    
     static myInstance = null;
+    
+    _class = "Barbarian";
+    _race = "Dwarf";
+    
+    _alignment = null;
 
     _stats = "empty";
     _cats = "empty";
 
-    _gender = "";
+    _gender = null;
     _name = "";
     _ft = "";
     _in = "";

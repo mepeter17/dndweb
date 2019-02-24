@@ -30,9 +30,9 @@ class ClassScreen extends React.Component
   ButtonClick(new_class)
   {
     let commonData = CommonDataManager.getInstance();
-    if(commonData.class_button !== null)
-      document.getElementById(commonData.class_button).setAttribute("class", "button_class");
-    commonData.class_button = new_class;
+    if(commonData._class !== null)
+      document.getElementById(commonData._class).setAttribute("class", "button_class");
+    commonData._class = new_class;
     document.getElementById(new_class).setAttribute("class", "button_persist");
     
       
@@ -59,9 +59,9 @@ class ClassScreen extends React.Component
 
   componentDidMount(){
     let commonData = CommonDataManager.getInstance();
-    if(commonData.class_button !== null){
-      this.ButtonClick(commonData.class_button);
-      document.getElementById(commonData.class_button).setAttribute("class", "button_persist");
+    if(commonData._class !== null){
+      this.ButtonClick(commonData._class);
+      document.getElementById(commonData._class).setAttribute("class", "button_persist");
     }
   }
 

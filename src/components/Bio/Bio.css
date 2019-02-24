@@ -12,7 +12,16 @@
   margin: 0px 0px 0px 10px;
 }
 
+.buttons1
+{
+  margin: 0px 0px 0px 10px;
+  display:flex;
+  flex-direction:column;
+  align-self: auto;
+}
+
 .ud{
+  margin: 0px 0px 0px 5px;
   background-color: #A89D8D;
   display:flex;
   flex-direction:column;
@@ -34,7 +43,7 @@
 
 .button_class_bio
 {
-  margin: 4px 18px 0px 0px;
+  margin: 4px 18px 10px 0px;
   border: 1px solid #000000;
   box-shadow: 4px 4px 7px 0px #706352;
   text-shadow: 1px 1px 1px #000000;
@@ -49,6 +58,28 @@
   color: #D8C8B2;
   background-color: #700407;
   box-shadow: 4px 4px 7px 0px #3A0A1A inset;
+}
+
+.button_persist_bio
+{
+  margin: 4px 18px 0px 0px;
+  border: 1px solid #000000;
+  color: #D8C8B2;
+  background-color: #700407;
+  box-shadow: 4px 4px 7px 0px #3A0A1A inset;
+  text-shadow: 1px 1px 1px #000000;
+  transform: translateX(4px) translateY(4px);
+}
+
+.button_persist_align
+{
+  margin: 4px 18px 0px 0px;
+  border: 1px solid #000000;
+  color: #D8C8B2;
+  background-color: #700407;
+  box-shadow: 4px 4px 7px 0px #3A0A1A inset;
+  text-shadow: 1px 1px 1px #000000;
+  transform: translateX(4px) translateY(-1px);
 }
 
 .random_button
@@ -92,8 +123,21 @@ input
 textarea
 {
   padding: 5px;
-  transform: translateY(-3px);
+  transform: translateX(10px) translateY(-3px);
   resize: none;
   width: 88%;
   height: 80%;
+}
+
+table
+{
+  margin: 0px 0px 0px 10px;
+}
+
+bio2
+{
+  font-family: serif;
+  font-size: 25px;
+  font-weight: bold;
+  color: #E8D8C2;
 }

@@ -22,6 +22,30 @@ class Bio extends React.Component
     }
     cD._ft = this.state.ft;
 
+    this.render();
+    this.ButtonClick = this.ButtonClick.bind(this);
+    this.child = React.createRef();
+  }
+
+  ButtonClick(new_gender)
+  {
+    let commonData = CommonDataManager.getInstance();
+    if(commonData._gender !== null)
+      document.getElementById(commonData._gender).setAttribute("class", "button_class_bio");
+    commonData._gender = new_gender;
+    document.getElementById(new_gender).setAttribute("class", "button_persist_bio");
+    
+    this.setState({
+      gender: commonData._gender
+    });
+  }
+
+  componentDidMount(){
+    let commonData = CommonDataManager.getInstance();
+    if(commonData._gender !== null){
+      this.ButtonClick(commonData._gender);
+      document.getElementById(commonData._gender).setAttribute("class", "button_persist_bio");
+    }
   }
 
   handleChange(e) {
@@ -58,25 +82,27 @@ class Bio extends React.Component
       <div className='background'>
         <Tabs value='bio'/>
           <div className='m'>
+          <button class='tab tab2 tab3 tab4 tab_block tab_shift'></button>
               <div className='lr'>
                   <div className='left'>
                       <div className='ud'>
                         <h1><b1>Bio</b1></h1>
-                        <h3><b3>Choose Name</b3></h3>
-                        <input type="text" name="name"
-                          onChange={ this.handleChange.bind(this) }
-                          value={this.state.name}/>
-                        <h3><b3>Select Gender: {this.state.gender}</b3></h3>
+                        <h3><b3>Choose Name:</b3></h3>
+                        <div className='buttons1'>
+                          <input type="text" name="name"
+                            onChange={ this.handleChange.bind(this) }
+                            value={this.state.name}/>
+                        </div>
+                        <h3><b3>Select Gender:</b3></h3>
                         <div className='buttons'>
-                          <bio1><button class='button_class_bio' onClick={()=>this.change_gender("Male")}>Male</button></bio1>
-                          <bio1><button class='button_class_bio' onClick={()=>this.change_gender("Female")}>Female</button></bio1>
+                          <bio1><button class='button_class_bio'  id='Male' onClick={()=>this.ButtonClick('Male')}>Male</button></bio1>
+                          <bio1><button class='button_class_bio'  id='Female' onClick={()=>this.ButtonClick('Female')}>Female</button></bio1>
                         </div>
                         <h3><b3>Set Height:</b3></h3>
                         <div className='buttons'>
-                          <input type="text"
-                            value={this.state.ft}
+                          <input type="text" name="ft"
                             onChange={ this.handleChange.bind(this) }
-                            name="ft"  />
+                            value={this.state.ft}/>
                           <a1>&nbsp;ft&nbsp;&nbsp;</a1>
                           <input type="text" name="in"
                             onChange={ this.handleChange.bind(this) }

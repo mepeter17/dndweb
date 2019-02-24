@@ -99,13 +99,17 @@
 .tab_block
 {
   background-color: #A89D8D;
-  width: 10.55%;
   height: 4px;
   border: none;
   border-left: 2px solid #000000;
   border-right: 2px solid #000000;
   border-radius: 0px;
   transform: translateX(-3px) translateY(-4px);
+}
+
+.tab_shift
+{
+  margin: 0px 0px 0px 1px;
 }
 
 

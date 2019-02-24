@@ -28,9 +28,9 @@ class RaceInfo extends Component
   ButtonClick(next_race)
   {
     let commonData = CommonDataManager.getInstance();
-    if(commonData.race_button !== null)
-      document.getElementById(commonData.race_button).setAttribute("class", "button_class");
-    commonData.race_button = next_race;
+    if(commonData._race !== null)
+      document.getElementById(commonData._race).setAttribute("class", "button_class");
+    commonData._race = next_race;
     document.getElementById(next_race).setAttribute("class", "button_persist");
     
     var ns =
@@ -50,9 +50,9 @@ class RaceInfo extends Component
 
   componentDidMount(){
     let commonData = CommonDataManager.getInstance();
-    if(commonData.race_button !== null){
-      this.ButtonClick(commonData.race_button);
-      document.getElementById(commonData.race_button).setAttribute("class", "button_persist");
+    if(commonData._race !== null){
+      this.ButtonClick(commonData._race);
+      document.getElementById(commonData._race).setAttribute("class", "button_persist");
     }
   }
 
@@ -63,7 +63,7 @@ class RaceInfo extends Component
       <div className='background'>
         <Tabs value='race'/>
         <div className='m'>
-          <button class ='tab tab_block'></button>
+          <button class ='tab tab_block tab_shift'></button>
           <div className='button_side'>
             <h1><b1>Race Selection</b1></h1>
             <h3><b3>Choose a Race:</b3></h3>
