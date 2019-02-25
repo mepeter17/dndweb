@@ -15,8 +15,6 @@ class ClassScreen extends React.Component
       class: "Class",
       important_stats: "",
       base_health: "",
-      armor: "",
-      weapon: "",
       skills: "",
       choose: "",
       desc: ""
@@ -49,7 +47,7 @@ class ClassScreen extends React.Component
   {
     var base = this.readTextFile("./../info/classes/" + c + "/base.txt").split("\r\n");
     var desc = this.readTextFile("./../info/classes/" + c + "/description1.txt").split("\r\n");
-    var abil, hit, armor, weapon;
+    var abil, hit;
     var skills = "", choose = "";
     
     for(var i = 0; i < base.length; i++)
@@ -72,14 +70,6 @@ class ClassScreen extends React.Component
         else if(hit === "12")
           hit += " (very high)";
       }
-      else if(category === "Armor Proficiencies")
-      {
-        armor = content;
-      }
-      else if(category === "Weapon Proficiencies")
-      {
-        weapon = content;
-      }
       else if(category === "Skills")
       {
         skills = content;
@@ -94,8 +84,6 @@ class ClassScreen extends React.Component
       class: c,
       important_stats: abil,
       base_health: hit,
-      armor: armor,
-      weapon: weapon,
       skills: skills,
       choose: choose,
       desc: desc

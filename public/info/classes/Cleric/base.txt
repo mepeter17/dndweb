@@ -1,0 +1,3 @@
+Ability Scores: Wisdom, Strength or Constitution
+Hit Dice: 1d8
+Skills: History, Insight, Medicine, Persuasion, Religion:2

@@ -1,0 +1,3 @@
+Ability Scores: Charisma, Constitution
+Hit Dice: 1d6
+Skills: Arcana, Deception, Insight, Intimidation, Persuasion, Religion:2
