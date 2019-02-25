@@ -3,7 +3,6 @@ import './RaceInfo.css'
 import Footer from '../Footer/Footer'
 import Tabs from '../Tabs/Tabs.js'
 import CommonDataManager from '../CommonDataManager';
-//const Race = require('../../DndBackend/DndCharacterStorage/Races/race');
 
 class RaceInfo extends Component
 {
@@ -13,15 +12,16 @@ class RaceInfo extends Component
     super(props);
     this.state =
     {
-      race: "Dwarf",
-      bonuses: ["bonus 1", "bonus 2"],
-      languages: ["lang one", "lang 2"],
-      other: ["other 1", "other 2"],
-      desc: "One dynamic long string",
-      image: "./dwarf.png"
+      race: "Race",
+      bonuses: "",
+      languages: "",
+      other: "",
+      desc: ""
     };
-    this.loadState("Dwarf");
   }
+
+  left_list = [ "Dwarf", "Elf", "Halfling", "Human", "Dragonborn"];
+  right_list = ["Gnome", "Half-Elf", "Half-Orc", "Tiefling"];
 
   readTextFile = file => {
     var allText;
@@ -80,9 +80,6 @@ class RaceInfo extends Component
       desc: desc
     });
   }
-
-  left_list = [ "Dwarf", "Elf", "Halfling", "Human", "Dragonborn"];
-  right_list = ["Gnome", "Half-Elf", "Half-Orc", "Tiefling"];
 
   ButtonClick(next_race)
   {
