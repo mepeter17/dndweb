@@ -71,15 +71,14 @@ class RaceInfo extends Component
       }
     }
     
-    this.state = 
+    this.setState( 
     {
       race: race,
       bonuses: bonus,
       languages: lang,
       other: other,
       desc: desc
-    };
-    this.render();
+    });
   }
 
   left_list = [ "Dwarf", "Elf", "Halfling", "Human", "Dragonborn"];
@@ -94,11 +93,6 @@ class RaceInfo extends Component
     document.getElementById(next_race).setAttribute("class", "button_persist");
     
     this.loadState(next_race);
-    this.setState({race: this.state.race,
-    bonuses: this.state.bonuses,
-    languages: this.state.languages,
-    other: this.state.other,
-    desc: this.state.desc});
   }
 
   componentDidMount(){
@@ -111,7 +105,6 @@ class RaceInfo extends Component
 
   render()
   {
-    console.log(this.state.race);
     return (
     <div className='content_footer'>
       <div className='background'>

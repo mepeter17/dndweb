@@ -4,9 +4,11 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "axios": "^0.18.0",
     "boostrap": "^2.0.0",
     "bootstrap": "^3.4.1",
     "browserify-fs": "^1.0.0",
+    "list-react-files": "^0.2.0",
     "prop-types": "^15.7.2",
     "react": "^16.8.2",
     "react-bootstrap": "^1.0.0-beta.5",
