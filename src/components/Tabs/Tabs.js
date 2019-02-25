@@ -80,13 +80,13 @@ class Tabs extends Component
             <button className={'tab tab4' + this.isc('bio')}>Bio</button> </Link> </li>
             <li> <Link to={"/alignment"}>
             <button className={'tab tab5' + this.isc('alignment')}>Alignment</button> </Link> </li>
-            <li> <Link to={"/alignment"}>
+            <li> <Link to={"/weapons"}>
             <button className={'tab tab6' + this.isc('weapons')}>Weapons</button> </Link> </li>
-            <li> <Link to={"/alignment"}>
+            <li> <Link to={"/armor"}>
             <button className={'tab tab7' + this.isc('armor')}>Armor</button> </Link> </li>
-            <li> <Link to={"/alignment"}>
+            <li> <Link to={"/other"}>
             <button className={'tab tab8' + this.isc('other')}>Other</button> </Link> </li>
-            <li> <Link to={"/alignment"}>
+            <li> <Link to={"/spells"}>
             <button className={'tab tab9' + this.isc('spells')}>Spells</button> </Link> </li>
           </ul>
         </div>

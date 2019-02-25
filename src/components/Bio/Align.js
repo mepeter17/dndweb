@@ -85,7 +85,7 @@ class Align extends React.Component
         </div>
         </div>
       </div>
-      <Footer prev="/bio" next='/equipment' />
+      <Footer prev="/bio" next='/weapons' />
     </div>
     );
   }
