@@ -20,6 +20,66 @@ class RaceInfo extends Component
       desc: "One dynamic long string",
       image: "./dwarf.png"
     };
+    this.loadState("Dwarf");
+  }
+
+  readTextFile = file => {
+    var allText;
+    var rawFile = new XMLHttpRequest();
+    rawFile.open("GET", file, false);
+    rawFile.onreadystatechange = () => {
+      if(rawFile.readyState === 4){
+        if(rawFile.status === 200 || rawFile.status === 0){
+          allText = rawFile.responseText;
+        }
+      }
+    };
+    rawFile.send(null);
+    
+    return allText;
+  }
+  
+  loadState(race)
+  {
+    var traits = this.readTextFile("./../info/races/" + race + "/traits.txt").split("\r\n");
+    var desc = this.readTextFile("./../info/races/" + race + "/description1.txt").split("\r\n");
+    var bonus, lang;
+    var other = "";
+    
+    for(var i = 0; i < traits.length; i++)
+    {
+      var category = traits[i].split(":")[0];
+      var content = traits[i].split(":")[1].trim();
+      if(category === "Ability Score")
+      {
+        bonus = content;
+      }
+      else if(category === "Languages")
+      {
+        lang = content;
+      }
+      else if(category === "Racial Abilities")
+      {
+        for(var j = 0; j < content; j++)
+        {
+          if(other.length === 0)
+            other = traits[++i].split(":")[0];
+          else
+            other = other + ", " + traits[++i].split(":")[0];
+        }
+        break;
+      }
+    }
+    
+    this.state = 
+    {
+      race: race,
+      bonuses: bonus,
+      languages: lang,
+      other: other,
+      desc: desc
+    };
+    this.render();
   }
 
   left_list = [ "Dwarf", "Elf", "Halfling", "Human", "Dragonborn"];
@@ -33,19 +93,12 @@ class RaceInfo extends Component
     commonData._race = next_race;
     document.getElementById(next_race).setAttribute("class", "button_persist");
     
-    var ns =
-    {
-      race: next_race,
-      bonuses: "Bonus",
-      languages: "Language 1",
-      other: ["Other", "Other 2"],
-      desc: "Description"
-    }
-    this.setState({race: ns.race,
-    bonuses: ns.bonuses,
-    languages: ns.languages,
-    other: ns.other,
-    desc: ns.desc});
+    this.loadState(next_race);
+    this.setState({race: this.state.race,
+    bonuses: this.state.bonuses,
+    languages: this.state.languages,
+    other: this.state.other,
+    desc: this.state.desc});
   }
 
   componentDidMount(){
@@ -58,6 +111,7 @@ class RaceInfo extends Component
 
   render()
   {
+    console.log(this.state.race);
     return (
     <div className='content_footer'>
       <div className='background'>
@@ -81,7 +135,7 @@ class RaceInfo extends Component
                 <a1>&nbsp;&nbsp;{this.state.bonuses}</a1>
                 <h3><b3>Languages:</b3></h3>
                 <a1>&nbsp;&nbsp;{this.state.languages}</a1>
-                <h3><b3>Other Important Info:</b3></h3>
+                <h3><b3>Racial Abilities:</b3></h3>
                 <a1>&nbsp;&nbsp;{this.state.other}</a1>
               </div>
 
