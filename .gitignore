@@ -23,3 +23,7 @@ npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
 /nbproject/private/
+/public/info/equipment/EquipmentSorter/build/
+/public/info/equipment/EquipmentSorter/nbproject/private/
+/public/info/spells/spell_sorter/build/
+/public/info/spells/spell_sorter/nbproject/private/
