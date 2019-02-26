@@ -1,4 +1,4 @@
-Ability Score: Dexterity 2
+Ability Score: Dexterity +2
 Average Age: 750 years
 Alignment: Chaotic Good
 Size: Medium

@@ -1,0 +1,3 @@
+Ability Scores: Dexterity, Intelligence or Charisma
+Hit Dice: 1d8
+Skills: Acrobatics, Athletics, Deception, Insight, Intimidation, investigation, Perception, Performance, Persuasion, Sleight of Hand, Stealth:4
