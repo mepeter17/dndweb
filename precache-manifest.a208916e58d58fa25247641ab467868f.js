@@ -4,8 +4,8 @@ self.__precacheManifest = [
     "url": "/dndweb/static/media/Halfling.902c6937.png"
   },
   {
-    "revision": "97a545f796cd1c9d4123",
-    "url": "/dndweb/static/css/main.61a3df55.chunk.css"
+    "revision": "b80f955f266994634c1c",
+    "url": "/dndweb/static/css/main.e727ebcc.chunk.css"
   },
   {
     "revision": "428ecd2badf1b27e8ce4",
@@ -68,8 +68,8 @@ self.__precacheManifest = [
     "url": "/dndweb/static/media/Half-Orc.36ec3046.png"
   },
   {
-    "revision": "97a545f796cd1c9d4123",
-    "url": "/dndweb/static/js/main.97a545f7.chunk.js"
+    "revision": "b80f955f266994634c1c",
+    "url": "/dndweb/static/js/main.b80f955f.chunk.js"
   },
   {
     "revision": "2f0705ce5517775b9459b8e976aa01a7",
@@ -132,7 +132,7 @@ self.__precacheManifest = [
     "url": "/dndweb/static/css/2.4f01f0cb.chunk.css"
   },
   {
-    "revision": "ecd251a558631c3480f29ed6e0dd2d3f",
+    "revision": "0766d30016692310ccce4f54fbe2ebab",
     "url": "/dndweb/index.html"
   }
 ];

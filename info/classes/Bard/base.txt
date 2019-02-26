@@ -7,3 +7,5 @@ Tool Proficiencies (choose 3): musical instrument
 Saving Throw Proficiencies: Dexterity, Charisma
 Skills: any:3
 Equipment: rapier or longsword or any simple weapon, diplomat's pack or entertainer's pack, lute or any musical instrument, leather armor, dagger
+Recommended Stat Order: Charisma, Dexterity, Wisdom, Constitution, Intelligence, Strength
+Alternative Stat Order: none
