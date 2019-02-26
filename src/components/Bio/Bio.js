@@ -19,13 +19,55 @@ class Bio extends React.Component
       in: cD._in,
       lbs: cD._lbs,
       bio: cD._bio,
-      age: cD._age
+      age: cD._age,
+      race: cD._race
     }
     cD._ft = this.state.ft;
 
-    this.render();
     this.ButtonClick = this.ButtonClick.bind(this);
     this.child = React.createRef();
+  }
+  
+  details = [
+    {race: "Human", feetBase: 4, inchBase: 8, heightMod: "2d10", weightBase: 110, weightMod: "2d4"},
+    {race: "Dwarf", feetBase: 3, inchBase: 10, heightMod: "2d4", weightBase: 120, weightMod: "2d6"},
+    {race: "Elf", feetBase: 4, inchBase: 6, heightMod: "2d10", weightBase: 95, weightMod: "1d4"},
+    {race: "Halfling", feetBase: 2, inchBase: 7, heightMod: "2d4", weightBase: 35, weightMod: "1"},
+    {race: "Dragonborn", feetBase: 5, inchBase: 6, heightMod: "2d8", weightBase: 175, weightMod: "2d6"},
+    {race: "Gnome", feetBase: 2, inchBase: 11, heightMod: "2d4", weightBase: 35, weightMod: "1"},
+    {race: "Half-Elf", feetBase: 4, inchBase: 9, heightMod: "2d8", weightBase: 110, weightMod: "2d4"},
+    {race: "Half-Orc", feetBase: 4, inchBase: 10, heightMod: "2d10", weightBase: 140, weightMod: "2d6"},
+    {race: "Tiefling", feetBase: 4, inchBase: 9, heightMod: "2d8", weightBase: 110, weightMod: "2d4"}
+  ];
+  
+  roll(dice)
+  {
+    if(dice === "1")
+      return 1;
+    dice = dice.split("d");
+    var sum = 0;
+    for(var i = 0; i < dice[0]; i++)
+      sum += Math.ceil(Math.random() * dice[1]);
+    return sum;
+  }
+  
+  randomHeight(race)
+  {
+    console.log(race);
+    for(var d of this.details)
+    {
+      if(race === d.race)
+      {
+        var inch = d.feetBase * 12 + d.inchBase;
+        inch += this.roll(d.heightMod);
+        this.state.ft = Math.floor(inch/12);
+        this.state.in = inch%12;
+        
+        let cD = CommonDataManager.getInstance();
+        cD._ft = Math.floor(inch/12);
+        cD._in = inch%12;
+      }
+    }
   }
 
   ButtonClick(new_gender)
@@ -106,7 +148,6 @@ class Bio extends React.Component
                             onChange={ this.handleChange.bind(this) }
                             value={this.state.age} />
                           <a1>&nbsp;yrs</a1>
-                          <bio1><button class='random_button' >Random</button></bio1>
                         </div>
                         <h3><b3>Set Height:</b3></h3>
                         <div className='buttons'>
@@ -118,7 +159,7 @@ class Bio extends React.Component
                             onChange={ this.handleChange.bind(this) }
                             value={this.state.in}/>
                           <a1>&nbsp;in</a1>
-                          <bio1><button class='random_button' >Random</button></bio1>
+                          <bio1><button class='random_button' onClick={(this.state.race) ? (this.randomHeight(this.state.race)) : (this.randomHeight("Human"))}>Random</button></bio1>
                         </div>
                           <h3><b3>Set Weight:</b3></h3>
                           <div className='buttons'>
