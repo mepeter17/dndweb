@@ -22,6 +22,7 @@ export default class CommonDataManager
 
     _gender = null;
     _name = "";
+    _age = "";
     _ft = "";
     _in = "";
     _lbs = "";

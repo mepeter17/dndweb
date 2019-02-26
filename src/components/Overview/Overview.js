@@ -53,7 +53,7 @@ class Overview extends React.Component
                   <div classname='ud' name='bio_langauges'>
                     <p><b2>Bio</b2></p>
                     <p><b5>{(CommonDataManager.gi()._gender) ? (CommonDataManager.gi()._gender) : ("?? Gender")}</b5></p>
-                    <p><b5>?? years old</b5></p>
+                    <p><b5>{(CommonDataManager.gi()._age !== "") ? (CommonDataManager.gi()._age) : ("??")} years old</b5></p>
                     <p><b5>{((CommonDataManager.gi()._ft !== "") ? (CommonDataManager.gi()._ft) : ("?")) + " ft " + ((CommonDataManager.gi()._in !== "") ? (CommonDataManager.gi()._in) : ("??")) + " in"}</b5></p>
                     <p><b5>{((CommonDataManager.gi()._lbs) ? (CommonDataManager.gi()._lbs) : ("???")) + " lbs"}</b5></p>
                     <p><b2>Languages</b2></p>

@@ -18,7 +18,8 @@ class Bio extends React.Component
       ft: cD._ft,
       in: cD._in,
       lbs: cD._lbs,
-      bio: cD._bio
+      bio: cD._bio,
+      age: cD._age
     }
     cD._ft = this.state.ft;
 
@@ -34,7 +35,7 @@ class Bio extends React.Component
       document.getElementById(commonData._gender).setAttribute("class", "button_class_bio");
     commonData._gender = new_gender;
     document.getElementById(new_gender).setAttribute("class", "button_persist_bio");
-    
+
     this.setState({
       gender: commonData._gender
     });
@@ -64,7 +65,8 @@ class Bio extends React.Component
       ft: cd._ft,
       in: cd._in,
       lbs: cd._lbs,
-      bio: cd._bio
+      bio: cd._bio,
+      age: cd._age
     });
   }
 
@@ -98,6 +100,10 @@ class Bio extends React.Component
                           <bio1><button class='button_class_bio'  id='Male' onClick={()=>this.ButtonClick('Male')}>Male</button></bio1>
                           <bio1><button class='button_class_bio'  id='Female' onClick={()=>this.ButtonClick('Female')}>Female</button></bio1>
                         </div>
+                        <h3><b3>Set Age:    </b3>
+                        <input type="text" name="age"
+                          onChange={ this.handleChange.bind(this) }
+                          value={this.state.age} /></h3>
                         <h3><b3>Set Height:</b3></h3>
                         <div className='buttons'>
                           <input type="text" name="ft"
