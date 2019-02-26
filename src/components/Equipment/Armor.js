@@ -78,16 +78,20 @@ class Armor extends React.Component
             <div className="ud">
               <h1><b1>Armor</b1></h1>
               <h3><b3>Buy Armor: {this.state.gold + " gold remaining"}</b3></h3>
+                <a1>&nbsp;&nbsp;&nbsp;&nbsp;{'Available:'}&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                {'Purchased:'}</a1>
                 <div className='lr'>
                     <div className='ScrollList' name="Available">
-                        <ul>{this.state.available.map(p => <li key={p}><button  id={p} onClick={()=>this.set_selected(p)}>{p['name'] + " (" + p['price'] + " gp)"}</button></li>)} </ul>
+                        <ul>{this.state.available.map(p => <ul key={p}><button class='button_equip' id={p} onClick={()=>this.set_selected(p)}>{p['name'] + " (" + p['price'] + " gp)"}</button></ul>)} </ul>
                     </div>
                     <div className='ud' name="Buttons">
-                      <button onClick={()=>this.buy()}>Buy</button>
-                      <button onClick={()=>this.sell()}>Sell</button>
+                      <button class='button_buy' onClick={()=>this.buy()}><buy>Buy</buy></button>
+                      <button class='button_buy' onClick={()=>this.sell()}><buy>Sell</buy></button>
                     </div>
                     <div className='ScrollList' name="Purchased">
-                      <ul>{this.state.purchased.map(p => <li key={p}><button  id={p} onClick={()=>this.set_selected(p)}>{p['name'] + " (" + p['price'] + " gp)"}</button></li>)} </ul>
+                      <ul>{this.state.purchased.map(p => <ul key={p}><button class='button_equip' id={p} onClick={()=>this.set_selected(p)}>{p['name'] + " (" + p['price'] + " gp)"}</button></ul>)} </ul>
                     </div>
                 </div>
             </div>

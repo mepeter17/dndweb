@@ -33,7 +33,8 @@ class Stats extends Component
       cats: this.cats,
       list: this.stats
     };
-    this.state.list.unshift('-');
+    if(this.state.list[0] !== '-')
+      this.state.list.unshift('-');
     commonData.setStats(this.state.list);
     commonData.setCats(this.state.cats);
   }
@@ -161,7 +162,7 @@ class Stats extends Component
                 <a1><ul key={p['s']}>
                   <div className='lr' >
                     <div className='ten'>{p['s']}</div>
-                      <DropdownButton title={p['v']}>
+                      <DropdownButton variant='danger' title={p['v']}>
                         {this.state.list.map(number =>
                             <Dropdown.Item>
                               <div onClick={()=>this.pick_stat(number, p['s'])}> {number} </div>
