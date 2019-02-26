@@ -64,7 +64,7 @@ class Overview extends React.Component
                     <p><b2>Stats</b2></p>
                     <p>Str {this.stats("Str")}</p>
                     <p>Dex {this.stats("Dex")}</p>
-                    <p>Cons {this.stats("Cons")}</p>
+                    <p>Cons {this.stats("Con")}</p>
                     <p>Int {this.stats("Int")}</p>
                     <p>Wis {this.stats("Wis")}</p>
                     <p>Cha {this.stats("Cha")}</p>
