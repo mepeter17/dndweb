@@ -1,4 +1,4 @@
-Ability Score: Constitution 2
+Ability Score: Constitution +2
 Average Age: 350 years
 Alignment: Lawful Good
 Size: Medium
