@@ -78,10 +78,10 @@ class Stats extends Component
   {
       this.setState()
   }
-  
+
   pick_stat2 = (number, stat_name) =>
   {
-    
+
   }
 
   pick_stat = (number, stat_name) =>
@@ -133,7 +133,7 @@ class Stats extends Component
         return b-a
     });
   }
-  
+
   display(p)
   {
     if(p === '- ')
@@ -162,7 +162,7 @@ class Stats extends Component
                 <a1><ul key={p['s']}>
                   <div className='lr' >
                     <div className='ten'>{p['s']}</div>
-                      <DropdownButton variant='danger' title={p['v']}>
+                      <DropdownButton className="drop_style" variant='danger' title={p['v']}>
                         {this.state.list.map(number =>
                             <Dropdown.Item>
                               <div onClick={()=>this.pick_stat(number, p['s'])}> {number} </div>

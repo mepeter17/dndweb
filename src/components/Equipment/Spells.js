@@ -18,9 +18,9 @@ class Spells extends React.Component
     var init_p1 = cd._spells1;
     this.state =
     {
-      available0: init_a0,
+      available0: this.real_a0,
       purchased0: init_p0,
-      available1: init_a1,
+      available1: this.real_a1,
       purchased1: init_p1,
       selected0: null,
       selected1: null,
@@ -28,6 +28,35 @@ class Spells extends React.Component
       max1: cd._max_spells1
     }
   }
+//{name: "Armor ", desc: "description"},
+  real_a0 = [
+    {name: "Blade Ward ", desc: "description"},
+    {name: "Dancing Lights ", desc: "description"},
+    {name: "Friends ", desc: "description"},
+    {name: "Light ", desc: "description"},
+    {name: "Mage Hand ", desc: "description"},
+    {name: "Mending ", desc: "description"},
+    {name: "Message ", desc: "description"},
+    {name: "Minor Illusion ", desc: "description"},
+    {name: "Prestidigitation ", desc: "description"},
+    {name: "True Strike ", desc: "description"},
+    {name: "Vicious Mockery ", desc: "description"}
+
+  ]
+
+  real_a1 = [
+    {name: "Animal Friendship ", desc: "description"},
+    {name: "Bane ", desc: "description"},
+    {name: "Charm Person ", desc: "description"},
+    {name: "Comprehend Languages ", desc: "description"},
+    {name: "Cure Wounds ", desc: "description"},
+    {name: "Detect Magic ", desc: "description"},
+    {name: "Disguise Self ", desc: "description"},
+    {name: "Dissonant Whispers ", desc: "description"},
+    {name: "Faerie Fire ", desc: "description"},
+    {name: "Healing Word ", desc: "description"},
+    {name: "Heroism ", desc: "description"},
+  ]
 
   set_selected(item, number)
   {
@@ -156,7 +185,7 @@ class Spells extends React.Component
 
               <div className='right1'>
                 <h3><b3>Description: { this.state.selected0 ? ( this.state.selected0['name'] ) : ("" )}</b3></h3>
-                <a1>&nbsp;&nbsp;{ this.state.selected0 ? ( this.state.selected0['name'] ) : ("none" )}</a1>
+                <a1>&nbsp;&nbsp;{ this.state.selected0 ? ( this.state.selected0['desc'] ) : ("none" )}</a1>
               </div>
           </div>
           <h3><b3>Level 1 Spells: {(this.state.max1-this.state.purchased1.length) + " Remaining"}</b3></h3>
@@ -185,7 +214,7 @@ class Spells extends React.Component
 
             <div className='right1'>
               <h3><b3>Description: { this.state.selected1 ? ( this.state.selected1['name'] ) : ("" )}</b3></h3>
-              <a1>&nbsp;&nbsp;{ this.state.selected1 ? ( this.state.selected1['name'] ) : ("none" )}</a1>
+              <a1>&nbsp;&nbsp;{ this.state.selected1 ? ( this.state.selected1['desc'] ) : ("none" )}</a1>
             </div>
         </div>
 
