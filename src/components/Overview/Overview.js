@@ -73,7 +73,7 @@ class Overview extends React.Component
                     </div>
 
                     </div>
-                    
+
                     <div className='equip_over'>
                     <div className='ud' name='equipment'>
                       <h3><b2_5>Equipment</b2_5></h3>
