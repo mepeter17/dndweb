@@ -43,14 +43,29 @@ class Weapons extends React.Component
     {name: "Light hammer ", price: 2, desc: "1d4 bludgeoning 2 lb. Light, thrown (range 20/60)"},
 
     {name: "Battleaxe ", price: 10, desc: "1d8 slashing 4 lb. Versatile (1d10)"},
-    {name: "Flail ", price: 20, desc: "1d8 bludgeoning 2 lb."},
-    {name: "Glaive ", price: 111, desc: "1d10 slashing 6 lb. Heavy, reach, two-handed"},
+    {name: "Flail ", price: 10, desc: "1d8 bludgeoning 2 lb."},
+    {name: "Glaive ", price: 20, desc: "1d10 slashing 6 lb. Heavy, reach, two-handed"},
     {name: "Club ", price: 1, desc: "1d4 bludgeoning 2 lb. Light"},
     {name: "Dagger ", price: 1, desc: "1d4 piercing 1 lb. Finesse, light, thrown (range 20/60)"},
     {name: "Greatclub ", price: 1, desc: "1d8 bludgeoning 10 lb. Two-handed"},
     {name: "Handaxe ", price: 5, desc: "1d6 slashing 2 lb. Light, thrown (range 20/60)"},
     {name: "Javelin ", price: 5, desc: "1d6 piercing 2 lb. Thrown (range 30/120)"}
-  ]
+  ];
+  
+  getDescArray(desc)
+  {
+    var array = desc.split(" ");
+    var index = 0;
+    var amount = array[index++];
+    var type = array[index++];
+    var weight = array[index++] + " " + array[index++];
+    var other = "";
+    while(index < array.length)
+      other += array[index++] + ' ';    
+    
+    var output = [amount, type, weight, other];
+    return output;
+  }
 
   set_selected(item)
   {
@@ -128,7 +143,10 @@ class Weapons extends React.Component
 
           <div className='right'>
             <h3><b3>Description: { this.state.selected ? ( this.state.selected['name'] ) : ("" )}</b3></h3>
-            <a1>&nbsp;&nbsp;{ this.state.selected ? ( this.state.selected['desc'] ) : ("none" )}</a1>
+            <h3><a1bold>&nbsp;&nbsp;Damage Amount:&nbsp;</a1bold><a1>{this.state.selected ? (this.getDescArray(this.state.selected['desc'])[0]) : ("")}</a1></h3>
+            <h3><a1bold>&nbsp;&nbsp;Damage Type:&nbsp;</a1bold><a1>{this.state.selected ? (this.getDescArray(this.state.selected['desc'])[1]) : ("")}</a1></h3>
+            <h3><a1bold>&nbsp;&nbsp;Weight:&nbsp;</a1bold><a1>{this.state.selected ? (this.getDescArray(this.state.selected['desc'])[2]) : ("")}</a1></h3>
+            <h3><a1bold>&nbsp;&nbsp;Other Descriptors:&nbsp;</a1bold><a1>{this.state.selected ? (this.getDescArray(this.state.selected['desc'])[3]) : ("")}</a1></h3>
           </div>
 
 

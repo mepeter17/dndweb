@@ -29,6 +29,10 @@
     padding: 4px;
     height: 32px;
 }
+.button_equip:focus
+{
+  background-color: #ded6c8;
+}
 
 .button_buy
 {

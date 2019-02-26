@@ -41,11 +41,11 @@ export default class CommonDataManager
     _available_other = [{name:"Nift Nick Nack",price: 10}, {name:"Yugioh Card", price:5}, {name:"Human Tears",price:1}];
     _purchased_other = [];
 
-    _max_spells0 = 2;
+    _max_spells0 = 0;
     _available_spells0 = [{name:"Wimpo Sauce"}, {name:"Diabetes"}, {name:"Nose Flute Magic"}];
     _spells0 = [];
 
-    _max_spells1 = 1;
+    _max_spells1 = 0;
     _available_spells1 = [{name:"Omegatron Delux"}, {name:"Super Spicy Caserole"}];
     _spells1 = [];
 

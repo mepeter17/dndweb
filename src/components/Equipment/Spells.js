@@ -16,6 +16,58 @@ class Spells extends React.Component
     var init_p0 = cd._spells0;
     var init_a1 = cd._available_spells1;
     var init_p1 = cd._spells1;
+    
+    switch(cd._class){
+      case "Barbarian":
+        cd._max_spells0 = 0;
+        cd._max_spells1 = 0;
+        break;
+      case "Bard":
+        cd._max_spells0 = 2;
+        cd._max_spells1 = 2;
+        break;
+      case "Cleric":
+        cd._max_spells0 = 3;
+        cd._max_spells1 = 2;
+        break;
+      case "Druid":
+        cd._max_spells0 = 2;
+        cd._max_spells1 = 2;
+        break;
+      case "Fighter":
+        cd._max_spells0 = 0;
+        cd._max_spells1 = 0;
+        break;
+      case "Monk":
+        cd._max_spells0 = 0;
+        cd._max_spells1 = 0;
+        break;
+      case "Paladin":
+        cd._max_spells0 = 0;
+        cd._max_spells1 = 0;
+        break;
+      case "Ranger":
+        cd._max_spells0 = 0;
+        cd._max_spells1 = 0;
+        break;
+      case "Rogue":
+        cd._max_spells0 = 0;
+        cd._max_spells1 = 0;
+        break;
+      case "Sorcerer":
+        cd._max_spells0 = 4;
+        cd._max_spells1 = 2;
+        break;
+      case "Warlock":
+        cd._max_spells0 = 2;
+        cd._max_spells1 = 2;
+        break;
+      case "Wizard":
+        cd._max_spells0 = 3;
+        cd._max_spells1 = 2;
+        break;
+    }
+    
     this.state =
     {
       available0: this.real_a0,
@@ -80,6 +132,14 @@ class Spells extends React.Component
             if(this.state.selected0 === this.state.purchased0[i])
               return;
       }
+      
+      for(var i=0; i<this.state.available0.length; i++)
+      {
+        if(this.state.selected0 === this.state.available0[i])
+        {
+          this.state.available0.splice(i,1);
+        }
+      }
 
       var new_purchased = this.state.purchased0;
       new_purchased.push(this.state.selected0);
@@ -91,7 +151,7 @@ class Spells extends React.Component
   sell0()
   {
       if(this.state.selected0 === null) return;
-      var new_purchased = this.state.purchased0
+      var new_purchased = this.state.purchased0;
       for(var i=0; i<new_purchased.length; i++)
       {
         if(this.state.selected0 === new_purchased[i])
@@ -101,6 +161,12 @@ class Spells extends React.Component
 
           this.setState({purchased0: new_purchased});
           cd._spells0 = new_purchased;
+          
+          var new_available = this.state.available0;
+          new_available.push(this.state.selected0);
+          new_available.sort(function(a,b){return a.name>b.name;});
+          
+          this.setState({available0: new_available});
           return;
         }
       }
@@ -120,6 +186,14 @@ class Spells extends React.Component
             if(this.state.selected1 === this.state.purchased1[i])
               return;
       }
+      
+      for(var i=0; i<this.state.available1.length; i++)
+      {
+        if(this.state.selected1 === this.state.available1[i])
+        {
+          this.state.available1.splice(i,1);
+        }
+      }
 
       var new_purchased = this.state.purchased1;
       new_purchased.push(this.state.selected1);
@@ -131,7 +205,7 @@ class Spells extends React.Component
   sell1()
   {
       if(this.state.selected1 === null) return;
-      var new_purchased = this.state.purchased1
+      var new_purchased = this.state.purchased1;
       for(var i=0; i<new_purchased.length; i++)
       {
         if(this.state.selected1=== new_purchased[i])
@@ -141,6 +215,12 @@ class Spells extends React.Component
 
           this.setState({purchased1: new_purchased});
           cd._spells1 = new_purchased;
+          
+          var new_available = this.state.available1;
+          new_available.push(this.state.selected1);
+          new_available.sort(function(a,b){return a.name>b.name;});
+          
+          this.setState({available1: new_available});
           return;
         }
       }

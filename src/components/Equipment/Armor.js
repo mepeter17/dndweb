@@ -31,15 +31,42 @@ class Armor extends React.Component
 {name: "Chain shirt ", price: 50, desc: "13 + Dex modifier (max 2) — — 20 lb."},
 {name: "Scale mail ", price: 50, desc: "14 + Dex modifier (max 2) — Disadvantage 45 lb."},
 {name: "Breastplate", price: 400, desc: "14 + Dex modifier (max 2) — — 20 lb."},
-{name: "Half plate ", price: 111, desc: "15 + Dex modifier (max 2) — Disadvantage 40 lb."},
+{name: "Half plate ", price: 750, desc: "15 + Dex modifier (max 2) — Disadvantage 40 lb."},
 {name: "Ring mail ", price: 30, desc: "14 — Disadvantage 40 lb."},
 {name: "Chain mail", price: 75, desc: "16 Str 13 Disadvantage 55 lb."},
 {name: "Splint", price: 200, desc: "17 Str 15 Disadvantage 60 lb."},
 {name: "Plate", price: 1500, desc: "18 Str 15 Disadvantage 65 lb."},
-{name: "*Shield  ", price: 10, desc: "+2 — — 6 lb."},
-
-
+{name: "Shield  ", price: 10, desc: "+2 — — 6 lb."}
   ];
+  
+  getDescArray(desc)
+  {
+    var array = desc.split(" ");
+    var index = 0;
+    var ac = "";
+    while(array[index] !== '—' && array[index] !== 'Str')
+      ac += array[index++] + ' ';
+    var str = "";
+    if(array[index] === '—')
+    {
+      str = "None";
+      index++;
+    }
+    else
+    {
+      str += array[index++] + ' ';
+      str += array[index++] + ' ';
+    }
+    var stealth = array[index++];
+    if(stealth === '—')
+      stealth = "None";
+    var weight = "";
+    while(index < array.length)
+      weight += array[index++] + ' ';
+    
+    var output = [ac, str, stealth, weight];
+    return output;
+  }
 
   set_selected(item)
   {
@@ -117,7 +144,10 @@ class Armor extends React.Component
 
           <div className='right'>
             <h3><b3>Description: { this.state.selected ? ( this.state.selected['name'] ) : ("" )}</b3></h3>
-            <a1>&nbsp;&nbsp;{ this.state.selected ? ( this.state.selected['desc'] ) : ("none" )}</a1>
+            <h3><a1bold>&nbsp;&nbsp;Armor Class:&nbsp;</a1bold><a1>{this.state.selected ? (this.getDescArray(this.state.selected['desc'])[0]) : ("")}</a1></h3>
+            <h3><a1bold>&nbsp;&nbsp;Strength Requirement:&nbsp;</a1bold><a1>{this.state.selected ? (this.getDescArray(this.state.selected['desc'])[1]) : ("")}</a1></h3>
+            <h3><a1bold>&nbsp;&nbsp;Stealth Disadvantage:&nbsp;</a1bold><a1>{this.state.selected ? (this.getDescArray(this.state.selected['desc'])[2]) : ("")}</a1></h3>
+            <h3><a1bold>&nbsp;&nbsp;Weight:&nbsp;</a1bold><a1>{this.state.selected ? (this.getDescArray(this.state.selected['desc'])[3]) : ("")}</a1></h3>
           </div>
 
 
