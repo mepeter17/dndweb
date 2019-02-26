@@ -13,7 +13,8 @@ class Align extends React.Component
     super(props);
     this.state =
     {
-      alignment: "Lawful Good"
+      alignment: "No alignment selected",
+      desc: ""
     }
     this.render();
     this.ButtonClick = this.ButtonClick.bind(this);
@@ -28,9 +29,12 @@ class Align extends React.Component
     commonData._alignment = new_align;
     document.getElementById(new_align).setAttribute("class", "button_persist_align");
 
+    var new_desc = this.get_description(new_align);
     this.setState({
-      alignment: new_align
+      alignment: new_align,
+      desc: new_desc
     });
+
   }
 
   componentDidMount(){
@@ -39,6 +43,23 @@ class Align extends React.Component
       this.ButtonClick(commonData._alignment);
       document.getElementById(commonData._alignment).setAttribute("class", "button_persist_align");
     }
+  }
+
+  get_description(target_align)
+  {
+    switch(target_align)
+    {
+        case "Lawful Good": return "Lawful good characters follow the rules of society and work toward the better of everyone. Most celestials are lawful good, dedicated to keeping the world's peace";
+        case "Neutral Good": return "Lawful neutral characters act in line with law, tradition, and common morals, but without a particular desire to improve lives or induce misery. Humanity as a whole tends to be lawful neutral, obeying laws and mostly caring for themselves and their friends";
+        case "Chaotic Good": return "Chaotic good characters follow their conscience and try to help others, but without care for what's expected of their behavior. Elves are usually chaotic good.";
+        case "Lawful Neutral": return "Lawful neutral characters act in line with law, tradition, and common morals, but without a particular desire to improve lives or induce misery. Humanity as a whole tends to be lawful neutral, obeying laws and mostly caring for themselves and their friends.";
+        case "True Neutral": return "True neutral is the ultimate neutral alignment. Characters of this alignment don't take sides in the battle of good and evil, and just do what they feel is best at the time. Lizardfolk are an example of this, since they follow what the world gives them and tend to be very simplistic and objective in their lives.";
+        case "Chaotic Neutral": return "Chaotic neutral characters are whimsical and value their freedom. They can be destructive, but lack malicious intent like chaotic evil characters. Many fey are chaotic neutral, and classes like bards, rogues, and barbarians are frequently played as chaotic neutral.";
+        case "Lawful Evil": return "Lawful evil characters work within the rules they're surrounded by to do what they want. Imp familiars are an example of this, since they must listen to their master's order but are inherently self-focused since they're fiends.";
+        case "Neutral Evil": return "Neutral evil characters follow a policy of, 'It's nothing personal, just business.' They do what they can get away with and don't usually have moral objections to anything. Rogues are stereotyped as neutral evil, though assassins, rogue or not, often are.";
+        case "Chaotic Evil": return "Chaotic evil characters tend to be ruled by violence and destruction, and take pride in the damage they cause. Drow, fiends, orcs, and giants are typically chaotic evil.";
+    }
+    return "woops";
   }
 
   render()
@@ -78,7 +99,7 @@ class Align extends React.Component
 
           <div className='right'>
             <h3><b3>{this.state.alignment}</b3></h3>
-            <a1>&nbsp;&nbsp;Lots of text</a1>
+            <a1>&nbsp;&nbsp;{this.state.desc}</a1>
           </div>
 
 
