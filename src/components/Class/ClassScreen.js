@@ -6,7 +6,6 @@ import CommonDataManager from '../CommonDataManager';
 
 class ClassScreen extends React.Component
 {
-
   constructor(props)
   {
     super(props);
@@ -48,7 +47,7 @@ class ClassScreen extends React.Component
     var base = this.readTextFile("./../info/classes/" + c + "/base.txt").split("\r\n");
     var desc = this.readTextFile("./../info/classes/" + c + "/description1.txt").split("\r\n");
     var abil, hit;
-    var skills = "", choose = "";
+    var skills = "", choose = "", recom = "", alterArray = [];
 
     for(var i = 0; i < base.length; i++)
     {
@@ -75,7 +74,47 @@ class ClassScreen extends React.Component
         skills = content;
         if(base[i].split(":").length === 3)
           choose = "Choose " + base[i].split(":")[2];
-        break;
+      }
+      else if(category === "Recommended Stat Order")
+      {
+        if(content.split(")").length > 1){
+          recom += content.split(")")[0].trim() + ") ";
+          content = content.split(")")[1].trim();
+        }
+        var st = content.split(", ");
+        for(var s of st)
+        {
+          recom += s.substring(0, 3);
+          if(s !== st[st.length-1])
+            recom += " > ";
+        }
+      }
+      else if(category === "Alternative Stat Order")
+      {
+        var alter = "";
+        if(content === "none")
+        {
+          alter = "None";
+          alterArray.push(alter);
+          continue;
+        }
+        for(var j = 1; j < base[i].split(":").length; j++)
+        {
+          content = base[i].split(":")[j].trim();
+          if(content.split(")").length > 1){
+            alter += content.split(")")[0].trim() + ") ";
+            content = content.split(")")[1].trim();
+          }
+          var st = content.split(", ");
+          for(var s of st)
+          {
+            alter += s.substring(0, 3);
+            if(s !== st[st.length-1])
+              alter += " > ";
+          }
+          alterArray.push(alter);
+          alter = "";
+        }
       }
     }
 
@@ -90,6 +129,8 @@ class ClassScreen extends React.Component
     });
 
     CommonDataManager.gi()._important_stats = abil;
+    CommonDataManager.gi()._recommended_stats = recom;
+    CommonDataManager.gi()._alternative_stats = alterArray;
   }
 
   ButtonClick(new_class)

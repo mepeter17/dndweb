@@ -49,15 +49,15 @@ class Align extends React.Component
   {
     switch(target_align)
     {
-        case "Lawful Good": return "Lawful good characters follow the rules of society and work toward the better of everyone. Most celestials are lawful good, dedicated to keeping the world's peace";
-        case "Neutral Good": return "Lawful neutral characters act in line with law, tradition, and common morals, but without a particular desire to improve lives or induce misery. Humanity as a whole tends to be lawful neutral, obeying laws and mostly caring for themselves and their friends";
-        case "Chaotic Good": return "Chaotic good characters follow their conscience and try to help others, but without care for what's expected of their behavior. Elves are usually chaotic good.";
-        case "Lawful Neutral": return "Lawful neutral characters act in line with law, tradition, and common morals, but without a particular desire to improve lives or induce misery. Humanity as a whole tends to be lawful neutral, obeying laws and mostly caring for themselves and their friends.";
-        case "True Neutral": return "True neutral is the ultimate neutral alignment. Characters of this alignment don't take sides in the battle of good and evil, and just do what they feel is best at the time. Lizardfolk are an example of this, since they follow what the world gives them and tend to be very simplistic and objective in their lives.";
-        case "Chaotic Neutral": return "Chaotic neutral characters are whimsical and value their freedom. They can be destructive, but lack malicious intent like chaotic evil characters. Many fey are chaotic neutral, and classes like bards, rogues, and barbarians are frequently played as chaotic neutral.";
-        case "Lawful Evil": return "Lawful evil characters work within the rules they're surrounded by to do what they want. Imp familiars are an example of this, since they must listen to their master's order but are inherently self-focused since they're fiends.";
-        case "Neutral Evil": return "Neutral evil characters follow a policy of, 'It's nothing personal, just business.' They do what they can get away with and don't usually have moral objections to anything. Rogues are stereotyped as neutral evil, though assassins, rogue or not, often are.";
-        case "Chaotic Evil": return "Chaotic evil characters tend to be ruled by violence and destruction, and take pride in the damage they cause. Drow, fiends, orcs, and giants are typically chaotic evil.";
+        case "Lawful Good": return "Lawful good creatures can be counted on to do the right thing as expected by society. Gold dragons, paladins, and most dwarves are lawful good.";
+        case "Neutral Good": return "Neutral good folk do the best they can to help others according to their needs. Many celestials, some cloud giants, and most gnomes are neutral good.";
+        case "Chaotic Good": return "Chaotic good creatures act as their conscience directs, with little regard for what others expect. Copper dragons, many elves, and unicorns are chaotic good.";
+        case "Lawful Neutral": return "Lawful neutral individuals act in accordance with law, tradition, or personal codes. Many monks and some wizards are lawful neutral.";
+        case "True Neutral": return "Neutral is the alignment of those who prefer to steer clear of moral questions and don’t take sides, doing what seems best at the time. Lizardfolk, most druids, and many humans are neutral.";
+        case "Chaotic Neutral": return "Chaotic neutral creatures follow their whims, holding their personal freedom above all else. Many barbarians and rogues, and some bards, are chaotic neutral.";
+        case "Lawful Evil": return "Lawful evil creatures methodically take what they want, within the limits of a code of tradition, loyalty, or order. Devils, blue dragons, and hobgoblins are lawful evil.";
+        case "Neutral Evil": return "Neutral evil is the alignment of those who do whatever they can get away with, without compassion or qualms. Many drow, some cloud giants, and yugoloths are neutral evil.";
+        case "Chaotic Evil": return "Chaotic evil creatures act with arbitrary violence, spurred by their greed, hatred, or bloodlust. Demons, red dragons, and orcs are chaotic evil.";
     }
     return "woops";
   }

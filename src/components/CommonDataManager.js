@@ -9,6 +9,8 @@ export default class CommonDataManager
     _race_bonuses = "Race not yet selected";
 
     _important_stats = "Class not yet selected";
+    _recommended_stats = "";
+    _alternative_stats = [];
 
     _speed = "20 ft";
     _iniative = "0";

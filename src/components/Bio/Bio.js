@@ -100,10 +100,14 @@ class Bio extends React.Component
                           <bio1><button class='button_class_bio'  id='Male' onClick={()=>this.ButtonClick('Male')}>Male</button></bio1>
                           <bio1><button class='button_class_bio'  id='Female' onClick={()=>this.ButtonClick('Female')}>Female</button></bio1>
                         </div>
-                        <h3><b3>Set Age:    </b3>
-                        <input type="text" name="age"
-                          onChange={ this.handleChange.bind(this) }
-                          value={this.state.age} /></h3>
+                        <h3><b3>Set Age:</b3></h3>
+                        <div className='buttons'>
+                          <input type="text" name="age"
+                            onChange={ this.handleChange.bind(this) }
+                            value={this.state.age} />
+                          <a1>&nbsp;yrs</a1>
+                          <bio1><button class='random_button' >Random</button></bio1>
+                        </div>
                         <h3><b3>Set Height:</b3></h3>
                         <div className='buttons'>
                           <input type="text" name="ft"
