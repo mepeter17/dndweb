@@ -67,6 +67,11 @@ export default class CommonDataManager
 
         return this.myInstance;
     }
+    
+    static newInstance()
+    {
+      CommonDataManager.myInstance = new CommonDataManager();
+    }
 
     getStats() {
         return this._stats;

@@ -2,4 +2,30 @@
 {
   background-color: #E8D8C2;
   overflow: hidden;
+  height: 95px;
+}
+
+.button_class_reset
+{
+  position: absolute;
+  right: 50px;
+  top: 30px;
+  width: 100px;
+  height: 50px;
+  font-size: 20px;
+  color: #E8D8C2;
+  border: 1px solid #000000;
+  box-shadow: 4px 4px 7px 0px #706352;
+  text-shadow: 1px 1px 1px #000000;
+}
+.button_class_reset:hover
+{
+  transform: translateX(1px) translateY(1px);
+}
+.button_class_reset:active
+{
+  transform: translateX(4px) translateY(4px);
+  color: #D8C8B2;
+  background-color: #700407;
+  box-shadow: 4px 4px 7px 0px #3A0A1A inset;
 }

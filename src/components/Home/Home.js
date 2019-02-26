@@ -1,10 +1,15 @@
 import React, { Component } from 'react';
 import './Home.css';
 import {Link} from 'react-router-dom';
+import CommonDataManager from '../CommonDataManager';
 
 
 class Home extends Component
 {
+  reset()
+  {
+    CommonDataManager.newInstance();
+  }
 
   render()
   {
@@ -13,9 +18,9 @@ class Home extends Component
         <div className='left_home'>
           <ul>
             <li> <Link to={"/race"}>
-            <button class='button'>Create Character</button> </Link> </li>
-            <li><Link to={"/"}>
-            <button class='button button2'>Load and View Character</button> </Link></li>
+            <button class='button' onClick={()=>this.reset()}>Create New Character</button> </Link> </li>
+            <li><Link to={"/race"}>
+            <button class='button button2'>Resume Character Creation</button> </Link></li>
           </ul>
         </div>
 

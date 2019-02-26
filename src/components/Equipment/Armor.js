@@ -117,7 +117,7 @@ class Armor extends React.Component
     <div className='background'>
       <Tabs value='armor'/>
       <div className='m'>
-          <button class='tab tab2 tab3 tab4 tab5 tab6 tab7 tab_block'></button>
+          <button class='tab tab2 tab3 tab4 tab5 tab6 tab7 tab_block tab_unshift'></button>
         <div className='lr'>
           <div className="left">
             <div className="ud">

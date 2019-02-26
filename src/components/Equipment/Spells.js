@@ -234,7 +234,7 @@ class Spells extends React.Component
     <div className='background'>
       <Tabs value='spells'/>
       <div className='m'>
-          <button class='tab tab2 tab3 tab4 tab5 tab6 tab7 tab8 tab_block'></button>
+          <button class='tab tab2 tab3 tab4 tab5 tab6 tab7 tab8 tab_block tab_unshift'></button>
         <div className='lr'>
         <div className="ud" name="base">
           <h1><b1>Spells</b1></h1>
