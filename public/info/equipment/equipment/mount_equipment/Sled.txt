@@ -1,3 +1,0 @@
-Item: Sled 
-Cost: 20 gp 
-Weight: 300 lb. 

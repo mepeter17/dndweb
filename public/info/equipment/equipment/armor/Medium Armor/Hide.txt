@@ -1,6 +1,0 @@
-Armor: Hide 
-Cost: 10 gp 
-Armor Class (AC): 12 + Dex modifier (max 2) 
-Strength: — 
-Stealth: — 
-Weight: 12 lb. 

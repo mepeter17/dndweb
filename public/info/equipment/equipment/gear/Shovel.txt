@@ -1,3 +1,0 @@
-Item: Shovel 
-Cost: 2 gp 
-Weight: 5 lb. 

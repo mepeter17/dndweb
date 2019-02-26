@@ -1,3 +1,0 @@
-Item: Stabling (per day) 
-Cost: 5 sp 
-Weight: — 

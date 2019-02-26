@@ -1,6 +1,0 @@
-Armor: Breastplate 
-Cost: 400 gp 
-Armor Class (AC): 14 + Dex modifier (max 2) 
-Strength: — 
-Stealth: — 
-Weight: 20 lb. 

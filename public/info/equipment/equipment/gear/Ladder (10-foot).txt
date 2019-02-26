@@ -1,3 +1,0 @@
-Item: Ladder (10-foot) 
-Cost: 1 sp 
-Weight: 25 lb. 

@@ -1,3 +1,0 @@
-Item: Sailing ship 
-Cost: 10,000 gp 
-Speed: 2 mph 

@@ -1,2 +1,0 @@
-Service: Road or gate toll 
-Pay: 1 cp 

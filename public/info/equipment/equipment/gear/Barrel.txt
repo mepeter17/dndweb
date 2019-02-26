@@ -1,3 +1,0 @@
-Item: Barrel 
-Cost: 2 gp 
-Weight: 70 lb. 

@@ -1,3 +1,0 @@
-Ability Scores: Wisdom, Constitution
-Hit Dice: 1d8
-Skills: Arcana, Animal Handling, Insight, Medicine, Nature, Perception, Religion, Survival:2

@@ -1,3 +1,0 @@
-Item: Chest 
-Cost: 5 gp 
-Weight: 25 lb. 

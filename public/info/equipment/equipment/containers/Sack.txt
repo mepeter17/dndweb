@@ -1,2 +1,0 @@
-Container: Sack 
-Capacity: 1 cubic foot/30 pounds of gear 

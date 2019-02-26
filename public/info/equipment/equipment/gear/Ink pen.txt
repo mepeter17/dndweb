@@ -1,3 +1,0 @@
-Item: Ink pen 
-Cost: 2 cp 
-Weight: — 

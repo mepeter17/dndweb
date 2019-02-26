@@ -1,3 +1,0 @@
-Item: Military 
-Cost: 20 gp 
-Weight: 30 lb. 

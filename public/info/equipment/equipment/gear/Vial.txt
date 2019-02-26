@@ -1,3 +1,0 @@
-Item: Vial 
-Cost: 1 gp 
-Weight: — 

@@ -1,3 +1,0 @@
-Ability Scores: Intelligence, Constitution or Dexterity
-Hit Dice: 1d6
-Skills: Arcana, History, Insight, Investigation, Medicine, Religion:2

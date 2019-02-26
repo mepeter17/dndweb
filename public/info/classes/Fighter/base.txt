@@ -1,3 +1,0 @@
-Ability Scores: Strength or Dexterity, Constitution
-Hit Dice: 1d10
-Skills: Acrobatics, Animal Handling, Athletics, History, Insight, Intimidation, Perception, Survival:2

@@ -1,3 +1,0 @@
-Item: Barding 
-Cost: 1 x4 
-Weight: 1x2 

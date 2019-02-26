@@ -1,3 +1,0 @@
-Ability Scores: Dexterity, Wisdom
-Hit Dice: 1d10
-Skills: Animal Handling, Athletics, Insight, Investigation, Nature, Perception, Stealth, Survival:3

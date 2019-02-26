@@ -1,3 +1,0 @@
-Ability Scores: Strength, Charisma
-Hit Dice: 1d10
-Skills: Athletics, Insight, Intimidation, Medicine, Persuasion, Religion:2
