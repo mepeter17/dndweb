@@ -20,7 +20,8 @@ class Bio extends React.Component
       lbs: cD._lbs,
       bio: cD._bio,
       age: cD._age,
-      race: cD._race
+      race: cD._race,
+      height_change: 6
     }
     cD._ft = this.state.ft;
 
@@ -53,19 +54,35 @@ class Bio extends React.Component
   
   randomHeight(race)
   {
-    console.log(race);
     for(var d of this.details)
     {
       if(race === d.race)
       {
         var inch = d.feetBase * 12 + d.inchBase;
-        inch += this.roll(d.heightMod);
-        this.state.ft = Math.floor(inch/12);
-        this.state.in = inch%12;
+        var change = this.roll(d.heightMod);
+        inch += change;
+        this.setState({ft: Math.floor(inch/12), in: inch%12, height_change: change});
         
         let cD = CommonDataManager.getInstance();
         cD._ft = Math.floor(inch/12);
         cD._in = inch%12;
+      }
+    }
+  }
+  
+  randomWeight(race)
+  {
+    for(var d of this.details)
+    {
+      if(race === d.race)
+      {
+        var weight = d.weightBase;
+        var mod = this.roll(d.weightMod);
+        weight += mod * this.state.height_change;
+        this.setState({lbs: weight});
+        
+        let cD = CommonDataManager.getInstance();
+        cD._lbs = weight;
       }
     }
   }
@@ -159,7 +176,7 @@ class Bio extends React.Component
                             onChange={ this.handleChange.bind(this) }
                             value={this.state.in}/>
                           <a1>&nbsp;in</a1>
-                          <bio1><button class='random_button' onClick={(this.state.race) ? (this.randomHeight(this.state.race)) : (this.randomHeight("Human"))}>Random</button></bio1>
+                          <bio1><button class='random_button' onClick={()=>(this.state.race) ? (this.randomHeight(this.state.race)) : (this.randomHeight("Human"))}>Random</button></bio1>
                         </div>
                           <h3><b3>Set Weight:</b3></h3>
                           <div className='buttons'>
@@ -168,7 +185,7 @@ class Bio extends React.Component
                               onChange={ this.handleChange.bind(this) }
                               name="lbs"/>
                             <a1>&nbsp;lbs</a1>
-                            <bio1><button class='random_button' >Random</button></bio1>
+                            <bio1><button class='random_button' onClick={()=>(this.state.race) ? (this.randomWeight(this.state.race)) : (this.randomWeight("Human"))}>Random</button></bio1>
                           </div>
                         </div>
                   </div>
