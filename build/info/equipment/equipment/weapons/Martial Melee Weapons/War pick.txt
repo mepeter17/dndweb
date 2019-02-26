@@ -1,5 +1,0 @@
-Name: War pick 
-Cost: 5 gp 
-Damage: 1d8 piercing 
-Weight: 2 lb. 
-Properties: — 

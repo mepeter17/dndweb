@@ -1,3 +1,0 @@
-Item: Wagon 
-Cost: 35 gp 
-Weight: 400 lb. 

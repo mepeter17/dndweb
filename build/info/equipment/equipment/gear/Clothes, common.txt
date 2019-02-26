@@ -1,3 +1,0 @@
-Item: Clothes, common 
-Cost: 5 sp 
-Weight: 3 lb. 

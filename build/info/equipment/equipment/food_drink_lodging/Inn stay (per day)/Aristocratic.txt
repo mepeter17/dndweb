@@ -1,2 +1,0 @@
-Item: Aristocratic 
-Cost: 4 gp 

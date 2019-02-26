@@ -1,3 +1,0 @@
-Item: Riding 
-Cost: 10 gp 
-Weight: 25 lb. 

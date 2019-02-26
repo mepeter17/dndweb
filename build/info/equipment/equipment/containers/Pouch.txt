@@ -1,2 +1,0 @@
-Container: Pouch 
-Capacity: 1/5 cubic foot/6 pounds of gear 

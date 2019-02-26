@@ -1,3 +1,0 @@
-Item: Clothes, fine 
-Cost: 15 gp 
-Weight: 6 lb. 

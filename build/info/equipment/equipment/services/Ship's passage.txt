@@ -1,2 +1,0 @@
-Service: Ship's passage 
-Pay: 1 sp per mile 

@@ -1,3 +1,0 @@
-Item: Saddlebags 
-Cost: 4 gp 
-Weight: 8 lb. 

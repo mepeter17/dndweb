@@ -1,3 +1,0 @@
-Item: Exotic 
-Cost: 60 gp 
-Weight: 40 lb. 

@@ -1,3 +1,0 @@
-Item: Pack 
-Cost: 5 gp 
-Weight: 15 lb. 

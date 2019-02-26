@@ -1,2 +1,0 @@
-Container: Flask or tankard 
-Capacity: 1 pint liquid 
