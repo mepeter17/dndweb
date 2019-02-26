@@ -151,10 +151,10 @@ class Stats extends Component
               </div>
 
               <div>
-                <h3>Racial Bonuses:</h3>
-                <h3>Important for Class:</h3>
-                <h3>Common:</h3>
-                <h3>Alternative:</h3>
+                <h3><b2>Racial Bonuses:</b2></h3>
+                <p><b3>{CommonDataManager.gi()._race_bonuses}</b3></p>
+                <h3><b2>Important for Class:</b2></h3>
+                <p><b3>{CommonDataManager.gi()._important_stats}</b3></p>
               </div>
           </div>
         </div>

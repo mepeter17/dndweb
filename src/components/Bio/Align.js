@@ -77,7 +77,7 @@ class Align extends React.Component
           </div>
 
           <div className='right'>
-            <h3><b3>Description</b3></h3>
+            <h3><b3>{this.state.alignment}</b3></h3>
             <a1>&nbsp;&nbsp;Lots of text</a1>
           </div>
 

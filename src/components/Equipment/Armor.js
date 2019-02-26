@@ -102,7 +102,7 @@ class Armor extends React.Component
         </div>
         </div>
       </div>
-      <Footer prev="/weapons" next='/other' />
+      <Footer prev="/weapons" next='/spells' />
     </div>
     );
   }

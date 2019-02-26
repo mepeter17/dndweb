@@ -18,7 +18,8 @@ class Tabs extends Component
       weapons: false,
       armor: false,
       other: false,
-      spells: false
+      spells: false,
+      overview: false
     };
 
     /*switch(props.value)
@@ -84,10 +85,10 @@ class Tabs extends Component
             <button className={'tab tab6' + this.isc('weapons')}>Weapons</button> </Link> </li>
             <li> <Link to={"/armor"}>
             <button className={'tab tab7' + this.isc('armor')}>Armor</button> </Link> </li>
-            <li> <Link to={"/other"}>
-            <button className={'tab tab8' + this.isc('other')}>Other</button> </Link> </li>
             <li> <Link to={"/spells"}>
-            <button className={'tab tab9' + this.isc('spells')}>Spells</button> </Link> </li>
+            <button className={'tab tab8' + this.isc('spells')}>Spells</button> </Link> </li>
+            <li> <Link to={"/overview"}>
+            <button className={'tab tab9' + this.isc('overview')}>Overview</button> </Link> </li>
           </ul>
         </div>
 

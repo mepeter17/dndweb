@@ -35,17 +35,17 @@ class RaceInfo extends Component
       }
     };
     rawFile.send(null);
-    
+
     return allText;
   }
-  
+
   loadState(race)
   {
     var traits = this.readTextFile("./../info/races/" + race + "/traits.txt").split("\r\n");
     var desc = this.readTextFile("./../info/races/" + race + "/description1.txt").split("\r\n");
     var bonus, lang;
     var other = "";
-    
+
     for(var i = 0; i < traits.length; i++)
     {
       var category = traits[i].split(":")[0];
@@ -70,8 +70,8 @@ class RaceInfo extends Component
         break;
       }
     }
-    
-    this.setState( 
+
+    this.setState(
     {
       race: race,
       bonuses: bonus,
@@ -79,6 +79,10 @@ class RaceInfo extends Component
       other: other,
       desc: desc
     });
+
+    let cd = CommonDataManager.getInstance();
+    cd._languages = lang;
+    cd._race_bonuses = bonus;
   }
 
   ButtonClick(next_race)
@@ -88,7 +92,7 @@ class RaceInfo extends Component
       document.getElementById(commonData._race).setAttribute("class", "button_class");
     commonData._race = next_race;
     document.getElementById(next_race).setAttribute("class", "button_persist");
-    
+
     this.loadState(next_race);
   }
 

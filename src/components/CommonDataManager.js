@@ -5,6 +5,11 @@ export default class CommonDataManager
     _class = null;
     _race = null;
 
+    _languages = "";
+    _race_bonuses = "Race not yet selected";
+
+    _important_stats = "Class not yet selected";
+
     _speed = "20 ft";
     _iniative = "0";
     _ac = 10;

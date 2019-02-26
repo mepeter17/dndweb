@@ -39,17 +39,17 @@ class ClassScreen extends React.Component
       }
     };
     rawFile.send(null);
-    
+
     return allText;
   }
-  
+
   loadState(c)
   {
     var base = this.readTextFile("./../info/classes/" + c + "/base.txt").split("\r\n");
     var desc = this.readTextFile("./../info/classes/" + c + "/description1.txt").split("\r\n");
     var abil, hit;
     var skills = "", choose = "";
-    
+
     for(var i = 0; i < base.length; i++)
     {
       var category = base[i].split(":")[0];
@@ -78,8 +78,8 @@ class ClassScreen extends React.Component
         break;
       }
     }
-    
-    this.setState( 
+
+    this.setState(
     {
       class: c,
       important_stats: abil,
@@ -88,6 +88,8 @@ class ClassScreen extends React.Component
       choose: choose,
       desc: desc
     });
+
+    CommonDataManager.gi()._important_stats = abil;
   }
 
   ButtonClick(new_class)
@@ -97,7 +99,7 @@ class ClassScreen extends React.Component
       document.getElementById(commonData._class).setAttribute("class", "button_class");
     commonData._class = new_class;
     document.getElementById(new_class).setAttribute("class", "button_persist");
-    
+
     this.loadState(new_class);
   }
 

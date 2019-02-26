@@ -39,8 +39,9 @@ class Overview extends React.Component
     return (
     <div className='content_footer'>
       <div className='background'>
-      <Tabs value=''/>
+      <Tabs value='overview'/>
         <div className='m'>
+        <button class='tab tab2 tab3 tab4 tab5 tab6 tab7 tab8 tab9 tab_block'></button>
             <div className='ud'>
               <h1><b1>Overview</b1></h1>
               <p><b2> { (CommonDataManager.gi()._name !== "") ? (CommonDataManager.gi()._name) : ("Character Name")} </b2></p>
@@ -56,7 +57,7 @@ class Overview extends React.Component
                     <p><b5>{((CommonDataManager.gi()._ft !== "") ? (CommonDataManager.gi()._ft) : ("?")) + " ft " + ((CommonDataManager.gi()._in !== "") ? (CommonDataManager.gi()._in) : ("??")) + " in"}</b5></p>
                     <p><b5>{((CommonDataManager.gi()._lbs) ? (CommonDataManager.gi()._lbs) : ("???")) + " lbs"}</b5></p>
                     <p><b2>Languages</b2></p>
-                    <p><b5>{CommonDataManager.gi()._race}</b5></p>
+                    <p><b5>{CommonDataManager.gi()._languages}</b5></p>
                   </div>
 
                   <div classname='ud' name='stats_combat'>
@@ -83,8 +84,6 @@ class Overview extends React.Component
                       {CommonDataManager.gi()._purchased_weapons.map(wep => <p>{wep['name']}</p>)}
                     <p><b3>Armor</b3></p>
                       {CommonDataManager.gi()._purchased_armor.map(wep => <p>{wep['name']}</p>)}
-                    <p><b3>Other</b3></p>
-                      {CommonDataManager.gi()._purchased_other.map(wep => <p>{wep['name']}</p>)}
 
                   </div>
 
@@ -92,7 +91,7 @@ class Overview extends React.Component
                     <b2>Spells</b2>
                     <p><b3>Level 0 (Cantrips)</b3></p>
                       {CommonDataManager.gi()._spells0.map(wep => <p>{wep['name']}</p>)}
-                    <p><b3>Level 0 (Cantrips)</b3></p>
+                    <p><b3>Level 1</b3></p>
                       {CommonDataManager.gi()._spells1.map(wep => <p>{wep['name']}</p>)}
 
 
@@ -109,7 +108,7 @@ class Overview extends React.Component
 
         </div>
       </div>
-      <Footer prev="/spells" next='/spells'/>
+      <Footer prev="/spells" next='/overview'/>
     </div>
     );
   }
