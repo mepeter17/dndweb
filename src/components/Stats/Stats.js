@@ -44,13 +44,9 @@ class Stats extends Component
     const div = document.querySelector('*');
     div.addEventListener('click', event => {
       if (!event.target.matches('.button_select')) {
-        var dropdowns = document.getElementsByClassName("dropdown-content");
-        var i;
-        for (i = 0; i < dropdowns.length; i++) {
-          var openDropdown = dropdowns[i];
-          if (openDropdown.classList.contains('show')) {
-            openDropdown.classList.remove('show');
-          }
+        var dropdowns = document.getElementsByClassName("dropdown-content_show");
+        for (var i = 0; i < dropdowns.length; i++) {
+          document.getElementsByClassName("dropdown-content_show")[i].setAttribute("class", "dropdown-content");
         }
       }
     });
@@ -194,7 +190,14 @@ class Stats extends Component
   
   dropdown(type)
   {
-    document.getElementById("dropdown" + type).classList.toggle("show");
+    var same = false;
+    if(document.getElementById("dropdown" + type).getAttribute("class") === "dropdown-content_show")
+      same = true;
+    if(document.getElementsByClassName("dropdown-content_show")[0] !== undefined)
+      document.getElementsByClassName("dropdown-content_show")[0].setAttribute("class", "dropdown-content");
+    if(!same)
+      document.getElementById("dropdown" + type).setAttribute("class", "dropdown-content_show");
+    
   }
 
   render()
@@ -216,13 +219,19 @@ class Stats extends Component
 
                   <a1><ul key={p['s']}>
                     <div className='lr' >
-                      <div className='ten'>{p['s'] + ':\t' + p['v']}</div>
-                        <button onClick={() => this.dropdown(p['s'])} class='button_select'></button>
+                      <div className='ten'>{p['s'] + ':'}</div>
+                        <input id={'stat_text' + p['s']} className="stat_input" disabled="disabled" value={p['v']}></input>
+                        <button onClick={() => this.dropdown(p['s'])} class='button_select'>
+                          <button className="drop_border"></button>
+                          <button className="drop"></button>
+                          <button className="drop_front_edge_border"></button>
+                          <button className="drop_front_edge"></button>
+                        </button>
                           <div id={'dropdown'+p['s']} class='dropdown-content'>
                             {this.state.list_remaining.map(number =>
-                                <a onClick={()=>this.pick_stat(number, p['s'])} id={"option" + p['s']}>
+                                <a_sel onClick={()=>this.pick_stat(number, p['s'])} id={"option" + p['s']}>
                                   {number}
-                                </a>)}
+                                </a_sel>)}
                         </div>
                     </div>
                   </ul></a1>

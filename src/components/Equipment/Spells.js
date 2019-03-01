@@ -79,6 +79,12 @@ class Spells extends React.Component
       max0: cd._max_spells0,
       max1: cd._max_spells1
     }
+    
+    if(this.state.max0 === 0)
+    {
+      this.state.available0 = [];
+      this.state.available1 = [];
+    }
   }
 //{name: "Armor ", desc: "description"},
   real_a0 = [
@@ -109,34 +115,6 @@ class Spells extends React.Component
     {name: "Healing Word ", desc: "description"},
     {name: "Heroism ", desc: "description"},
   ]
-
-  readTextFile = file => {
-    var allText;
-    var rawFile = new XMLHttpRequest();
-    rawFile.open("GET", file, false);
-    rawFile.onreadystatechange = () => {
-      if(rawFile.readyState === 4){
-        if(rawFile.status === 200 || rawFile.status === 0){
-          allText = rawFile.responseText;
-        }
-      }
-    };
-    rawFile.send(null);
-
-    return allText;
-  }
-  
-  loadSpells(number)
-  {
-    let cd = CommonDataManager.getInstance();
-    if(cd._class === null){
-      this.real_a0 = [];
-      this.real_a1 = [];
-      return;
-    }
-    
-    var spells0 = this.readTextFile("./../info/spells/categories/" + cd._class + " Spells/Cantrips (0 Level)/base.txt")
-  }
 
   set_selected(item, number)
   {
