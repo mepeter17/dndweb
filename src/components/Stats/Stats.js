@@ -116,10 +116,10 @@ class Stats extends Component
     else
     {
       var new_list = this.state.list;
-      var found = false;
+      var done = false;
       for(var i=0;i<this.state.list.length;i++)
       {
-        if(new_list[i] === number)
+        if(new_list[i] === number && !done)
         {
           for(var s of new_cats){
             if(s['s'] === stat_name){
@@ -129,14 +129,17 @@ class Stats extends Component
               }
               s['i'] = i;
               s['v'] = number;
+              done = true;
             }
           }
         }
       }
-      if(!found)
-        for(var i=0;i<this.state.list_remaining.length;i++)
-          if(new_list_r[i] === number)
-            new_list_r.splice(i, 1);
+      for(var i=0;i<this.state.list_remaining.length;i++)
+        if(new_list_r[i] === number)
+        {
+          new_list_r.splice(i, 1);
+          break;
+        }
     }
           
     new_list_r.sort(function(a,b){

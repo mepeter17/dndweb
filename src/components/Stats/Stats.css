@@ -82,14 +82,14 @@ i
   display: flex;
   position: absolute;
   background-color: #ffffef;
-  min-width: 20px;
+  min-width: 40px;
   padding: 5px;
   z-index: 1;
   overflow: auto;
   box-shadow: 3px 3px 6px #222222;
   flex-direction: column;
-  margin-left: 110px;
-  margin-top: 40px;
+  margin-left: 116px;
+  margin-top: 37px;
   text-align: right;
 }
 
